@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    imzzy1201&#39;s Blog
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="imzzy 1201">
+<!-- <meta name="description" content=""> -->
+<meta name="keywords" content="">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://imzzy1201.github.io//media/css/style.css" />
+<link rel="stylesheet" href="https://imzzy1201.github.io//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://imzzy1201.github.io//media/script/tocbot.min.js"></script>
+<script src="https://imzzy1201.github.io//media/script/script.min.js"></script>
+<script src="https://imzzy1201.github.io//media/script/icon.min.js"></script>
+<script src="https://imzzy1201.github.io//media/script/prism.min.js"></script>
+<link rel="stylesheet" href="https://imzzy1201.github.io//media/css/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+
+            <!--CDN样式-->
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+            <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+            
+                <script>
+                    (function() {
+                        var bp = document.createElement('script');
+                        var curProtocol = window.location.protocol.split(':')[0];
+                        if (curProtocol === 'https') {
+                            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                        } else {
+                            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                        }
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bp, s);
+                    })();
+                </script>
+                
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166330324-1"></script>
+                    <script>
+                        window.dataLayer = window.dataLayer || [];
+
+                        function gtag() {
+                            dataLayer.push(arguments);
+                        }
+                        gtag('js', new Date());
+                        gtag('config', 'UA-166330324-1');
+                    </script>
+                    
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://imzzy1201.github.io/">
+                    imzzy1201&#39;s Blog
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts/">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/post/friends">
+                        友链
+                    </a>
+                    
+                    <a class="menu-item" href="https://github.com/imzzy1201">
+                        My GitHub
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1594650894940" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://imzzy1201.github.io/">
+                            imzzy1201&#39;s Blog
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1594650894940" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts/">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/post/friends">
+                            友链
+                        </a>
+                        
+                        <a class="menu-item" href="https://github.com/imzzy1201">
+                            My GitHub
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                20200713 校内测试订正
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        imzzy1201
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-07-13</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">15.8
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">3181</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://imzzy1201.github.io/tag/0iH55KRDD/">订正</a>
+                                
+                            </span>
+                                        
+                                            Views:
+                                            <span data-hk-page="current"> - </span>
+                                            
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <blockquote>
+<p>I may not be able to change the past, but I can learn from it.</p>
+</blockquote>
+<!-- more -->
+<h1 id="1-概况">1. 概况</h1>
+<p>T1 100pts 挺简单没啥问题。<br>
+T2 90pts 码错了好几个地方竟然还能这么高？？？<br>
+T3 0pts 差一行就切了。🙃<br>
+T4 0pts 不会。</p>
+<p>总分 190pts，差。</p>
+<h1 id="2-题解">2. 题解</h1>
+<h2 id="t1-变换序列">T1 变换序列</h2>
+<p><a href="https://www.luogu.com.cn/problem/P1963">题面（luogu）</a></p>
+<h3 id="前置知识">前置知识</h3>
+<ul>
+<li>二分图匹配（匈牙利和网络瘤都可以）</li>
+</ul>
+<h3 id="思路">思路</h3>
+<p>先考虑数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 能放的位置，其下标（从 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 开始）只可能为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>i</mi><mo>+</mo><msub><mi>D</mi><mi>i</mi></msub><mo>)</mo><mtext> </mtext><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mtext> </mtext><mi>N</mi></mrow><annotation encoding="application/x-tex">(i+D_i)\bmod N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>i</mi><mo>−</mo><msub><mi>D</mi><mi>i</mi></msub><mo>)</mo><mtext> </mtext><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mtext> </mtext><mi>N</mi></mrow><annotation encoding="application/x-tex">(i-D_i)\bmod N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>，每个数只能放一个位置，而每个位置也只能放一个数。所以可以规约成完美匹配问题，即用下标与数字匹配，数字 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 向下标 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>i</mi><mo>±</mo><msub><mi>D</mi><mi>i</mi></msub><mo>)</mo><mtext> </mtext><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mtext> </mtext><mi>N</mi></mrow><annotation encoding="application/x-tex">(i\pm D_i)\bmod N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span> 连边，跑二分图匹配，如果没有完美匹配就相当于无解。</p>
+<p>另一个问题是要求输出字典序最小的一组解，考虑到匹配过程是每次尝试增广。因为我们希望越小的数字越往前放，所以我们希望它靠后开始增广。这一点不难理解。同时，在一次增广中，也应该先尝试从下标较小的位置开始。可以用反证法证明这个策略的正确性</p>
+<h3 id="code">Code</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+#define rgi register int
+#define ll long long
+// ----------------------------
+// #define int ll
+using namespace std;
+const int maxn=10004;
+const int mod=998244353,inf=1000000007;
+
+inline int read()
+{
+	int x=0,f=0,ch=0;
+	while(!isdigit(ch)) f|=(ch=='-'),ch=getchar();
+	while(isdigit(ch)) x=(x&lt;&lt;1)+(x&lt;&lt;3)+(ch^'0'),ch=getchar();
+	return f?-x:x;
+}
+
+vector&lt;int&gt; mp[maxn];
+int match[maxn]; bool vis[maxn];
+bool dfs(int p) // 匈牙利算法
+{
+	for(unsigned rgi i=0,v;i&lt;mp[p].size();++i)
+	{
+		v=mp[p][i];
+		if(vis[v]) continue; vis[v]=1;
+        if(match[v]==-1||dfs(match[v])) return match[v]=p,1;
+	}
+	return 0;
+}
+
+int a[maxn],ans[maxn];
+signed main()
+{
+	// freopen(&quot;transform.in&quot;,&quot;r&quot;,stdin);
+	// freopen(&quot;transform.out&quot;,&quot;w&quot;,stdout);
+	int n=read();
+	for(rgi i=0;i&lt;n;++i)
+	{
+		a[i]=read();
+		mp[i].push_back((i+a[i])%n);
+		mp[i].push_back((i-a[i]+n)%n);
+		sort(mp[i].begin(),mp[i].end());
+	}
+	memset(match,-1,sizeof(match));
+	for(rgi i=n-1;i&gt;=0;--i)
+	{
+		memset(vis,0,sizeof(vis));
+		if(!dfs(i)) {puts(&quot;No Answer&quot;); return 0;} // 无法增广即说明无解
+	}
+	for(rgi i=0;i&lt;n;++i) ans[match[i]]=i;
+    // 注意答案不直接为这个匹配，这个匹配是数与下标的对应而非下标与数的对应，所以要反过来一下
+	for(rgi i=0;i&lt;n;++i) printf(&quot;%d &quot;,ans[i]);
+	return 0;
+}
+// ----------------------------
+// by imzzy
+
+</code></pre>
+<h2 id="t2-最大子图">T2 最大子图</h2>
+<p><a href="https://www.luogu.com.cn/problem/P2272">题面（luogu）</a></p>
+<h3 id="前置知识-2">前置知识</h3>
+<ul>
+<li>缩点（tarjan 算法）</li>
+<li>拓扑排序</li>
+<li>DAG 上 DP</li>
+</ul>
+<h3 id="思路-2">思路</h3>
+<p>题目要求“最大半连通导出子图的节点数”及“并列最大半连通导出子图的个数”。先观察半连通图的性质，我们发现一个图是半连通图当且仅当图中存在一条路径能经过所有节点。这个结论也比较显而易见。</p>
+<p>然后，继续结合强连通分量的很好的性质：强连通分量内任意两点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi><mo separator="true">,</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">u,v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span> 间存在至少一条有向路径。也就是说一条路径只要进了强连通分量就可以走完这个分量里的所有点，再从任何一点出去。所以可以缩点，并记录编号为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 的强连通分量里的节点数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>i</mi><mi>z</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">siz[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span>，路径进了分量 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 就相当于能走 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>i</mi><mi>z</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">siz[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span> 个节点。</p>
+<p>缩点之后图成了 DAG，根据套路我们将其拓扑排序并 DP。拓扑排序后，考虑按逆拓扑序动态规划以分量 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 为起点的“最大半连通导出子图节点数”和“这样的导出子图的个数”，即可。</p>
+<h3 id="code-2">Code</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+#define rgi register int
+#define ll long long
+// ----------------------------
+// #define int ll
+using namespace std;
+const int maxn=200004;
+const int mod=998244353,inf=1000000007;
+
+inline int read()
+{
+	int x=0,f=0,ch=0;
+	while(!isdigit(ch)) f|=(ch=='-'),ch=getchar();
+	while(isdigit(ch)) x=(x&lt;&lt;1)+(x&lt;&lt;3)+(ch^'0'),ch=getchar();
+	return f?-x:x;
+}
+
+int n,m,p,u,v;
+vector&lt;int&gt; to[maxn],to2[maxn];
+// to 存原图，to2 存缩点后的辅助图（用于拓扑排序和 DP）
+
+int col[maxn],siz[maxn];
+// col[i] 表示 i 所在的强连通分量编号，siz[i] 表示编号为 i 的强连通分量节点数
+
+bool vis[maxn];
+int dfn[maxn],low[maxn],stk[maxn];
+int dfsclock,indxs,cnt;
+void tarjan(int p) // 缩点
+{
+	vis[stk[++indxs]=p]=1;
+	low[p]=dfn[p]=++dfsclock;
+	for(rgi i=0;i&lt;to[p].size();++i)
+		if(!dfn[to[p][i]]) tarjan(to[p][i]),low[p]=min(low[p],low[to[p][i]]);
+		else if(vis[to[p][i]]) low[p]=min(low[p],dfn[to[p][i]]);
+	if(low[p]==dfn[p])
+	{
+		vis[p]=0,siz[col[p]=++cnt]=1;
+		while(p!=stk[indxs])
+			vis[stk[indxs]]=0,++siz[cnt],col[stk[indxs--]]=cnt;
+		--indxs;
+	}
+}
+
+int ccf[maxn],topo[maxn],ip; queue&lt;int&gt; q;
+inline void topsort() // 拓扑排序
+{
+	for(rgi i=1;i&lt;=n;++i) for(rgi j=0;j&lt;to[i].size();++j) if(col[i]!=col[to[i][j]])
+		to2[col[i]].push_back(col[to[i][j]]),++ccf[col[to[i][j]]];
+	for(rgi i=1;i&lt;=cnt;++i) if(ccf[i]==0) q.push(i),topo[++ip]=i;
+	int u,v;
+	while(!q.empty())
+	{
+		u=q.front(),q.pop();
+		for(rgi i=0;i&lt;to2[u].size();++i)
+			if((--ccf[to2[u][i]])==0) q.push(to2[u][i]),topo[++ip]=to2[u][i];
+	}
+}
+
+pair&lt;ll,ll&gt; f[maxn]; // f[i].first 为“…的节点数”，f[i].second 为“…的个数”，其中 i 为分量编号
+inline void insert(pair&lt;ll,ll&gt; &amp;a,pair&lt;ll,ll&gt; b) {if(b.first==a.first) (a.second+=b.second)%=p; if(b.first&gt;a.first) a=b;} // insert 是用 b 来更新 a
+set&lt;pair&lt;int,int&gt; &gt; s;
+inline pair&lt;ll,ll&gt; calc()
+{
+	for(rgi i=1;i&lt;=cnt;++i) to2[i].clear(),f[i].second=1; // 这里要反向建图，所以清空了重来
+	for(rgi i=1;i&lt;=n;++i) for(rgi j=0;j&lt;to[i].size();++j)
+		if(col[i]!=col[to[i][j]]&amp;&amp;!s.count(make_pair(col[i],col[to[i][j]])))
+			to2[col[to[i][j]]].push_back(col[i]),s.insert(make_pair(col[i],col[to[i][j]]));
+            // 注意连接两分量的同一条边不能加多次，否则会多次更新
+	pair&lt;ll,ll&gt; res=make_pair(0,0);
+	for(rgi i=cnt,u;i&gt;0;--i)
+	{
+		u=topo[i],f[u].first+=siz[u],insert(res,f[u]);
+		for(rgi j=0;j&lt;to2[u].size();++j) insert(f[to2[u][j]],f[u]);
+	}
+	return res;
+}
+
+signed main()
+{
+	// freopen(&quot;graph.in&quot;,&quot;r&quot;,stdin);
+	// freopen(&quot;graph.out&quot;,&quot;w&quot;,stdout);
+	n=read(),m=read(),p=read();
+	for(rgi i=1;i&lt;=m;++i) u=read(),v=read(),to[u].push_back(v);
+	for(rgi i=1;i&lt;=n;++i) if(!dfn[i]) tarjan(i);
+	topsort();
+	pair&lt;ll,ll&gt; ans=calc();
+	printf(&quot;%lld\n%lld&quot;,ans.first,ans.second);
+	return 0;
+}
+// ----------------------------
+// by imzzy
+
+</code></pre>
+<h2 id="t3-最短路">T3 最短路</h2>
+<p><a href="https://darkbzoj.tk/problem/4152">题面（DARKBZOJ）</a></p>
+<h3 id="前置知识-3">前置知识</h3>
+<ul>
+<li>最短路算法（Dijkstra, SPFA 皆可）</li>
+</ul>
+<h3 id="思路-3">思路</h3>
+<p>先考虑连上所有存在的边（即每两个点间连两条，分别为横纵坐标的差），然后再考虑删掉无用边。分方向讨论，先看横向边，如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span> 的左侧，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 的左侧，那么很明显 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 至 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 的横向边是毫无意义的（因为这条边完全可以被 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>→</mo><mi>j</mi><mo>→</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">i\to j\to k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 这条路径替代），也就是说按照横坐标排序后，横向边只用连接相邻两点即可。纵坐标同理。这样连边后边数就已经是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 级别的了，剩下就是正常求最短路即可</p>
+<h3 id="code-3">Code</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+#define rgi register int
+#define ll long long
+// ----------------------------
+// #define int ll
+using namespace std;
+const int maxn=200004;
+const int mod=998244353,inf=1000000007;
+
+inline int read()
+{
+	int x=0,f=0,ch=0;
+	while(!isdigit(ch)) f|=(ch=='-'),ch=getchar();
+	while(isdigit(ch)) x=(x&lt;&lt;1)+(x&lt;&lt;3)+(ch^'0'),ch=getchar();
+	return f?-x:x;
+}
+
+int n;
+struct EDGE{int v,nxt; ll w;}e[maxn&lt;&lt;2];
+int first[maxn],cnte;
+inline void addedge(int p,int q,ll w)
+{
+	e[++cnte].v=q,e[cnte].w=w,
+	e[cnte].nxt=first[p],first[p]=cnte;
+}
+inline void addedge2(int p,int q,ll w) {addedge(p,q,w),addedge(q,p,w);}
+
+struct NODE{
+	int v; ll w;
+	inline bool operator&lt;(const NODE &amp;a) const {return w&gt;a.w;};
+	NODE(int a,int b) {v=a,w=b;}
+};
+ll dis[maxn]; bool vis[maxn];
+priority_queue&lt;NODE&gt; q;
+ll Dij() // Dijkstra
+{
+	memset(dis,0x3f,sizeof(dis)); int u,v;
+	q.push(NODE(1,0)),dis[1]=0;
+	while(!q.empty())
+	{
+		u=q.top().v,q.pop();
+		if(vis[u]) continue; vis[u]=1;
+		for(rgi i=first[u];i;i=e[i].nxt)
+		{
+			v=e[i].v;
+			if(dis[v]&gt;dis[u]+e[i].w)
+				dis[v]=dis[u]+e[i].w,q.push(NODE(v,dis[v]));
+		}
+	}
+	return dis[n];
+}
+
+struct POINT{int x,y,k;}p[maxn];
+inline bool cmp1(POINT a,POINT b) {return a.x&lt;b.x;}
+inline bool cmp2(POINT a,POINT b) {return a.y&lt;b.y;}
+signed main()
+{
+	// freopen(&quot;dist.in&quot;,&quot;r&quot;,stdin);
+	// freopen(&quot;dist.out&quot;,&quot;w&quot;,stdout);
+	n=read();
+	for(rgi i=1;i&lt;=n;++i) p[i].x=read(),p[i].y=read(),p[i].k=i;
+	sort(p+1,p+1+n,cmp1); for(rgi i=1;i&lt;n;++i) addedge2(p[i].k,p[i+1].k,p[i+1].x-p[i].x);
+	sort(p+1,p+1+n,cmp2); for(rgi i=1;i&lt;n;++i) addedge2(p[i].k,p[i+1].k,p[i+1].y-p[i].y);
+    // 分别按横纵坐标排序后加边
+	printf(&quot;%lld&quot;,Dij());
+	return 0;
+}
+// ----------------------------
+// by imzzy
+
+</code></pre>
+<h2 id="t4-平面图判定">T4 平面图判定</h2>
+<p><a href="https://www.luogu.com.cn/problem/P3209">题面（luogu）</a></p>
+<h3 id="前置知识-4">前置知识</h3>
+<ul>
+<li>并查集</li>
+</ul>
+<h3 id="思路-4">思路</h3>
+<p>首先，我们知道平面图节点数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 和边数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 总有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>≤</mo><mn>3</mn><mi>n</mi><mo>−</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">m\le3n-6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span>，因此如果给的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>&gt;</mo><mn>3</mn><mi>n</mi><mo>−</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">m&gt;3n-6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> 就可以直接断言其非平面图了。因此可以将图的边数降至 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 级别。</p>
+<p>既然题目给的是个哈密顿图，还给出了哈密顿回路，那么我们就先画出这个回路，形成一个大圈。很明显，这个图里的所有边，要么在圈内，要么在圈外，要么在圈上 <s>（废话）</s>。</p>
+<p>在圈上的边不用考虑，因为说“要么在圈内，要么在圈外，要么在圈上”时已经确定了没有边穿过圈，即圈上所有边不跟其它边相交。而对于其它边，如果记 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">st[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span> 为边 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 在圈内的断言，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><msup><mi>t</mi><mo mathvariant="normal">′</mo></msup><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">st&#x27;[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span> 为边 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 在圈外的断言，那么如果边 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i,j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span> 在圈内会相交，则始终有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>⇔</mo><mi>s</mi><msup><mi>t</mi><mo mathvariant="normal">′</mo></msup><mo>[</mo><mi>j</mi><mo>]</mo><mo separator="true">,</mo><mi>s</mi><mi>t</mi><mo>[</mo><mi>j</mi><mo>]</mo><mo>⇔</mo><mi>s</mi><msup><mi>t</mi><mo mathvariant="normal">′</mo></msup><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">st[i]\Leftrightarrow st&#x27;[j],st[j]\Leftrightarrow st&#x27;[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇔</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇔</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span> 成立。</p>
+<p>因此我们只用将所有此类条件整合，并检查是否有矛盾即可。矛盾的形式也很容易看出来，只用判断有没有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>∧</mo><mi>s</mi><msup><mi>t</mi><mo mathvariant="normal">′</mo></msup><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">st[i]\wedge st&#x27;[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span> 为真的情况，如果没有就是平面图，有则不是</p>
+<p>至于维护这些关系，我们可以用并查集维护一些等价类。比如 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>⇔</mo><mi>s</mi><msup><mi>t</mi><mo mathvariant="normal">′</mo></msup><mo>[</mo><mi>j</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">st[i]\Leftrightarrow st&#x27;[j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇔</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span> 就相当于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">st[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><msup><mi>t</mi><mo mathvariant="normal">′</mo></msup><mo>[</mo><mi>j</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">st&#x27;[j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span> 在同一等价类中，即对这两个状态原处的等价类进行合并；最后对于每个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 再检查 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">st[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><msup><mi>t</mi><mo mathvariant="normal">′</mo></msup><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">st&#x27;[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span> 是否在同一等价类即可。</p>
+<h3 id="code-4">Code</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+#define rgi register int
+#define ll long long
+// ----------------------------
+// #define int ll
+using namespace std;
+const int maxn=204,maxm=100004;
+const int mod=998244353,inf=1000000007;
+
+inline int read()
+{
+	int x=0,f=0,ch=0;
+	while(!isdigit(ch)) f|=(ch=='-'),ch=getchar();
+	while(isdigit(ch)) x=(x&lt;&lt;1)+(x&lt;&lt;3)+(ch^'0'),ch=getchar();
+	return f?-x:x;
+}
+
+int n,m;
+int u[maxm],v[maxm],a[maxn],pos[maxn];
+
+class DSU{ // 并查集
+private: int fa[maxm];
+public: inline void build(int siz) {for(rgi i=1;i&lt;=siz;++i) fa[i]=i;}
+	inline int find(int p) {while(fa[p]!=p) p=fa[p]=fa[fa[p]]; return p;}
+	inline void merge(int p,int q) {fa[find(p)]=find(q);}
+	inline bool query(int p,int q) {return find(p)==find(q);}
+}dsu;
+
+signed main()
+{
+	// freopen(&quot;planar.in&quot;,&quot;r&quot;,stdin);
+	// freopen(&quot;planar.out&quot;,&quot;w&quot;,stdout);
+	rgi T=read();
+	while(T--)
+	{
+		n=read(),m=read();
+		for(rgi i=1;i&lt;=m;++i) u[i]=read(),v[i]=read();
+		for(rgi i=1;i&lt;=n;++i) a[i]=read(),pos[a[i]]=i; // pos[i] 为节点 i 在圈上的编号
+		if(m&gt;n*3-6) {puts(&quot;NO&quot;); continue;}
+		for(rgi i=1;i&lt;=m;++i)
+		{
+			u[i]=pos[u[i]],v[i]=pos[v[i]]; // 改一下节点编号，方便后面判圈内两边是否交叉
+			if(u[i]&gt;v[i]) swap(u[i],v[i]); // 免于分类讨论
+		}
+		dsu.build(m*2+1);
+		for(rgi i=1;i&lt;=m;++i) for(rgi j=i+1;j&lt;=m;++j)
+		{
+			if(u[i]==u[j]||v[i]==v[j]||u[j]==v[i]||u[i]==v[j]) continue; // 有相同节点即可跳过
+			int a=i,b=j; if(u[a]&gt;u[b]) swap(a,b); // 免于分类讨论
+			if(u[b]&lt;v[a]&amp;&amp;v[a]&lt;v[b]) dsu.merge(a,b+m),dsu.merge(b,a+m);
+		}
+		bool flag=1;
+		for(rgi i=1;i&lt;=m&amp;&amp;flag;++i) if(dsu.query(i,i+m)) flag=0;
+		puts(flag?&quot;YES&quot;:&quot;NO&quot;);
+	}
+	return 0;
+}
+// ----------------------------
+// by imzzy
+
+</code></pre>
+<h1 id="3-总结">3. 总结</h1>
+<p>emmmm……</p>
+<p>前三题都还是想到了的，但时间分配不当、实现上也有些问题，所以丢了不少分。最后一题 2-SAT 或者 DSU，这个套路没怎么做过，不太会用，平面图的性质也不知道，没想出来也算正常（?）</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                            	<a href="#" style="padding-left: 20px;">#</a>
+                                <ul class="markdownIt-TOC">
+<li><a href="#1-%E6%A6%82%E5%86%B5">1. 概况</a></li>
+<li><a href="#2-%E9%A2%98%E8%A7%A3">2. 题解</a>
+<ul>
+<li><a href="#t1-%E5%8F%98%E6%8D%A2%E5%BA%8F%E5%88%97">T1 变换序列</a>
+<ul>
+<li><a href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86">前置知识</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF">思路</a></li>
+<li><a href="#code">Code</a></li>
+</ul>
+</li>
+<li><a href="#t2-%E6%9C%80%E5%A4%A7%E5%AD%90%E5%9B%BE">T2 最大子图</a>
+<ul>
+<li><a href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86-2">前置知识</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF-2">思路</a></li>
+<li><a href="#code-2">Code</a></li>
+</ul>
+</li>
+<li><a href="#t3-%E6%9C%80%E7%9F%AD%E8%B7%AF">T3 最短路</a>
+<ul>
+<li><a href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86-3">前置知识</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF-3">思路</a></li>
+<li><a href="#code-3">Code</a></li>
+</ul>
+</li>
+<li><a href="#t4-%E5%B9%B3%E9%9D%A2%E5%9B%BE%E5%88%A4%E5%AE%9A">T4 平面图判定</a>
+<ul>
+<li><a href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86-4">前置知识</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF-4">思路</a></li>
+<li><a href="#code-4">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3-%E6%80%BB%E7%BB%93">3. 总结</a></li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>imzzy1201</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://imzzy1201.github.io/post/LQUS5KCXn/">https://imzzy1201.github.io/post/LQUS5KCXn/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/LQUS5KCXn/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/LQUS5KCXn/&sharesource=qzone&title=20200713 校内测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1594650894940&summary=&lt;blockquote&gt;
+&lt;p&gt;I may not be able to change the past, but I can learn from it.&lt;/p&gt;
+&lt;/blockquote&gt;
+"><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/LQUS5KCXn/&sharesource=weibo&title=20200713 校内测试订正 + " - " + &lt;blockquote&gt;
+&lt;p&gt;I may not be able to change the past, but I can learn from it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&pic="https://imzzy1201.github.io//images/avatar.png?v=1594650894940 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://imzzy1201.github.io/tag/0iH55KRDD/">#
+                                                订正
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://imzzy1201.github.io/post/1Qf-3P6_-/">
+                                                                                                    杂题 - CF1375F Integer Game
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitalk/gitalk/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/gh/gitalk/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width:60em;max-width: calc(min(max(100% - 42em, 640px),95%));margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '96f5be00e19e03f19687',
+        clientSecret: 'e3027518b495d7487e5d1f416d1a4e1a5e035257',
+        repo: 'comment',
+        owner: 'imzzy1201',
+        admin: ['imzzy1201'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        @imzzy1201.github.io<br> 
+
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        imzzy1201&#39;s Blog &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by imzzy1201
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.4
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+        </footer>
+        
+                <script>
+                    
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1594650894940);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+                
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

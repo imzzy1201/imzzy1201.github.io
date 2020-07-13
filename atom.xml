@@ -2,13 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://imzzy1201.github.io/</id>
     <title>imzzy1201&apos;s Blog</title>
-    <updated>2020-07-13T03:40:42.126Z</updated>
+    <updated>2020-07-13T14:36:05.230Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://imzzy1201.github.io/"/>
     <link rel="self" href="https://imzzy1201.github.io/atom.xml"/>
     <logo>https://imzzy1201.github.io/images/avatar.png</logo>
     <icon>https://imzzy1201.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, imzzy1201&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[20200713 校内测试订正]]></title>
+        <id>https://imzzy1201.github.io/post/LQUS5KCXn/</id>
+        <link href="https://imzzy1201.github.io/post/LQUS5KCXn/">
+        </link>
+        <updated>2020-07-13T11:54:22.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>I may not be able to change the past, but I can learn from it.</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>I may not be able to change the past, but I can learn from it.</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[杂题 - CF1375F Integer Game]]></title>
         <id>https://imzzy1201.github.io/post/1Qf-3P6_-/</id>
@@ -141,21 +156,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>The more you learn, the more you know; the more you know, the more you forget; the more you forget, the less you know. So why bother to learn?</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[友情链接]]></title>
-        <id>https://imzzy1201.github.io/post/friends/</id>
-        <link href="https://imzzy1201.github.io/post/friends/">
-        </link>
-        <updated>2020-04-24T09:37:31.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>Some people come to you in your life, to make you know that you are such an easy target.</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>Some people come to you in your life, to make you know that you are such an easy target.</p>
 </blockquote>
 ]]></content>
     </entry>
