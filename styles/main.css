@@ -620,6 +620,6 @@
         #menu-toggle-zh {display:none;}
     
       html {
-        font-family: -apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif;
+        font-family: 'PingFang SC',-apple-system,BlinkMacSystemFont,'Helvetica Neue','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif;
       }
     
