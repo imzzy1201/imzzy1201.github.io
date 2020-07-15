@@ -1129,7 +1129,8 @@ header label {
     top: 80px;
     left: 30px;
     width: 8em;
-    max-height: calc(100% - 150px);
+    height: 70%;
+    height: calc(100% - 150px);
     overflow-y: auto;
     font-size: 1.75rem;
 }
