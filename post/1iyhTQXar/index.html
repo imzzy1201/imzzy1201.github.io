@@ -101,7 +101,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1594893723421" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1594896238146" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -120,7 +120,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1594893723421" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1594896238146" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -207,9 +207,9 @@
                                 Date: <a href="#">2020-07-15</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">6.0
+                                    href="#">11.9
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">1191</a></span>
+                                    <span class="post-words">words:<a href="#">2228</a></span>
                                     
                                             Views:
                                             <span data-hk-page="current"> - </span>
@@ -231,6 +231,7 @@ T3 0pt 完全不会。🙃</p>
 <h1 id="2-题解">2. 题解</h1>
 <p><a href="https://imzzy1201.github.io/f1/test20200715.zip">测试资源链接</a>（校内题库，不公开密码）</p>
 <h2 id="t1-简单棋盘问题">T1 简单棋盘问题</h2>
+<p>题面（暂无）</p>
 <h3 id="思路">思路</h3>
 <p>考虑到其相当于求所有国王到目标位置的<a href="https://en.wikipedia.org/wiki/Chebyshev_distance">切比雪夫距离</a>，而我们知道切比雪夫距离是可以转化为<a href="https://en.wikipedia.org/wiki/Manhattan_distance">曼哈顿距离</a>的。</p>
 <p>举个例子下面坐标系中有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> 两点：<br>
@@ -334,7 +335,114 @@ signed main() {
 // by imzzy
 
 </code></pre>
-<h2 id="t2">T2</h2>
+<h2 id="t2-简单数据结构">T2 简单数据结构</h2>
+<p>题面（暂无）</p>
+<h3 id="思路-2">思路</h3>
+<p><s>菜到连线段树都写挂</s>（雾</p>
+<p>考虑用线段树暴力维护区间最小值，然后查询的时候每次取出区间里的最小值，放入答案队列，然后删掉这个位置的值（即赋值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>inf</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">\inf</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mop">in<span style="margin-right:0.07778em;">f</span></span></span></span></span>）如果取到某个时候发现取出来的数比 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 还大了就说明此次询问无解。</p>
+<p>复杂度应该是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>m</mi><mo>+</mo><mo>∑</mo><mi>K</mi><mo>]</mo><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">[m+\sum K]\log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span></span></span></span>，大概是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>8</mn></msup></mrow><annotation encoding="application/x-tex">10^8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">8</span></span></span></span></span></span></span></span></span></span></span> 级别的，卡卡常就能过。</p>
+<p><s>也是可以的，我一共过了两个测试点，其中一个就是大样例</s>（雾</p>
+<h3 id="code-2">Code</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+#define rgi register int
+#define ll long long
+class fastin{
+	private: int _ch,_f;
+	public: inline fastin&amp; operator&gt;&gt;(char&amp;c) {c=getchar(); return *this;}
+		template&lt;typename _Tp&gt; inline fastin&amp; operator&gt;&gt;(_Tp&amp;_x){
+		_x=0; while(!isdigit(_ch)) _f|=(_ch==45),_ch=getchar();
+		while(isdigit(_ch)) _x=(_x&lt;&lt;1)+(_x&lt;&lt;3)+(_ch^48),_ch=getchar();
+		_f&amp;&amp;(_x=-_x,_f=0); return *this;}
+	fastin() {_ch=_f=0;}
+}fin;
+class fastout{
+#define endl '\n'
+	private: int _num[32],_head;
+	public: inline fastout&amp; operator&lt;&lt;(char c) {putchar(c); return *this;}
+		template&lt;typename _Tp&gt; inline fastout&amp; operator&lt;&lt;(_Tp _x){
+		_Tp _k; if(_x==0) {putchar('0'); return *this;} if(_x&lt;0) putchar('-'),_x=-_x;
+		while(_x&gt;0) _k=_x/10,++_head,_num[_head]=(_x-(_k&lt;&lt;1)-(_k&lt;&lt;3))^48,_x=_k;
+		while(_head&gt;0) putchar(_num[_head]),--_head; return *this;}
+	fastout() {_head=0;}
+}fout;
+// ----------------------------
+// #define int ll
+using namespace std;
+const int maxn=500004;
+const int mod=998244353,inf=2000000007;
+
+class segment_tree{
+#define mid ((l+r)&gt;&gt;1)
+private:
+	int size,ql,qr,qv,*A,fill[maxn&lt;&lt;2],cnt; // fill 打的是取 max 标记
+	pair&lt;int,int&gt; minv[maxn&lt;&lt;2],changed[maxn]; // first 维护最小值，second 维护最小值对应的下标
+	inline void pushup(int p) {minv[p]=min(minv[p&lt;&lt;1],minv[p&lt;&lt;1|1]);}
+	inline void pushdown(int p,int l,int r) {
+		if(!fill[p]) return;
+		fill[p&lt;&lt;1]=max(fill[p],fill[p&lt;&lt;1]),fill[p&lt;&lt;1|1]=max(fill[p],fill[p&lt;&lt;1|1]);
+		minv[p&lt;&lt;1]=max(minv[p&lt;&lt;1],make_pair(fill[p],minv[p&lt;&lt;1].second));
+		minv[p&lt;&lt;1|1]=max(minv[p&lt;&lt;1|1],make_pair(fill[p],minv[p&lt;&lt;1|1].second));
+		fill[p]=0;
+	}
+	void build(int p,int l,int r) {
+		fill[p]=0; if(l==r) return minv[p]=make_pair(A[l],l),void();
+		build(p&lt;&lt;1,l,mid),build(p&lt;&lt;1|1,mid+1,r),pushup(p);
+	}
+	void modify(int p,int l,int r) { // 修改单点的值
+		if(l==r) return fill[p]=qv,minv[p]=make_pair(qv,l),void();
+		pushdown(p,l,r);
+		if(ql&lt;=mid) modify(p&lt;&lt;1,l,mid);
+		else modify(p&lt;&lt;1|1,mid+1,r);
+		pushup(p);
+	}
+	void update_(int p,int l,int r) { // 区间取 max
+		if(l&gt;=ql&amp;&amp;r&lt;=qr) return minv[p]=max(minv[p],make_pair(qv,minv[p].second)),fill[p]=max(fill[p],qv),void();
+		pushdown(p,l,r);
+		if(ql&lt;=mid) update_(p&lt;&lt;1,l,mid);
+		if(qr&gt;mid) update_(p&lt;&lt;1|1,mid+1,r);
+		pushup(p);
+	}
+	pair&lt;int,int&gt; query(int p,int l,int r) { // 查询区间最小值
+		if(l&gt;=ql&amp;&amp;r&lt;=qr) return minv[p]; pushdown(p,l,r);
+		if(qr&lt;=mid) return query(p&lt;&lt;1,l,mid);
+		if(ql&gt;mid) return query(p&lt;&lt;1|1,mid+1,r);
+		return min(query(p&lt;&lt;1,l,mid),query(p&lt;&lt;1|1,mid+1,r));
+	}
+public:
+	inline void build(int siz,int *k) {A=k,size=siz,cnt=0,build(1,1,size);}
+	inline void update(int l,int r,int v) {ql=l,qr=r,qv=v,update_(1,1,size);}
+	inline bool query(int l,int r,int x,int k,int *ans) {
+		bool flag=1;
+		for(rgi i=1;i&lt;=k&amp;&amp;flag;++i) {
+			ql=l,qr=r,changed[++cnt]=query(1,1,size); // 改成 inf 时要加入队列因为最后要还原的
+			ql=changed[cnt].second,qv=inf,modify(1,1,size);
+			if(changed[cnt].first&lt;x) ans[i]=changed[cnt].first; else flag=0;
+		} while(cnt) ql=changed[cnt].second,qv=changed[cnt--].first,modify(1,1,size);
+		return flag;
+	}
+#undef mid
+}sgt;
+int a[maxn];
+signed main() {
+	// freopen(&quot;segtree.in&quot;,&quot;r&quot;,stdin);
+	// freopen(&quot;segtree.out&quot;,&quot;w&quot;,stdout);
+	int n,m,op,l,r,x,k; fin&gt;&gt;n;
+	for(rgi i=1;i&lt;=n;++i) fin&gt;&gt;a[i]; sgt.build(n,a); 
+	for(fin&gt;&gt;m;m;--m) {
+		fin&gt;&gt;op;
+		if(op==1) fin&gt;&gt;l&gt;&gt;r&gt;&gt;x,sgt.update(l,r,x);
+		else{
+			fin&gt;&gt;l&gt;&gt;r&gt;&gt;x&gt;&gt;k,op=sgt.query(l,r,x,k,a);
+			if(op) {for(rgi i=1;i&lt;=k;++i) fout&lt;&lt;a[i]&lt;&lt;' '; fout&lt;&lt;endl;}
+			else fout&lt;&lt;-1&lt;&lt;endl;
+		}
+	}
+	return 0;
+}
+// ----------------------------
+// by imzzy
+
+</code></pre>
 
                         </div>
                         
@@ -350,7 +458,12 @@ signed main() {
 <li><a href="#code">Code</a></li>
 </ul>
 </li>
-<li><a href="#t2">T2</a></li>
+<li><a href="#t2-%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">T2 简单数据结构</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF-2">思路</a></li>
+<li><a href="#code-2">Code</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -384,14 +497,14 @@ signed main() {
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
                                                         <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/1iyhTQXar/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/1iyhTQXar/&sharesource=qzone&title=20200715 校内测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1594893723421&summary=&lt;blockquote&gt;
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/1iyhTQXar/&sharesource=qzone&title=20200715 校内测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1594896238146&summary=&lt;blockquote&gt;
 &lt;p&gt;Some people seem to have everything. In fact, they do have everything.&lt;/p&gt;
 &lt;/blockquote&gt;
 "><i class="fa fa-qq"></i></a>
                                                         <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/1iyhTQXar/&sharesource=weibo&title=20200715 校内测试订正 + " - " + &lt;blockquote&gt;
 &lt;p&gt;Some people seem to have everything. In fact, they do have everything.&lt;/p&gt;
 &lt;/blockquote&gt;
-&pic="https://imzzy1201.github.io//images/avatar.png?v=1594893723421 "><i class="fa fa-weibo "></i></a>
+&pic="https://imzzy1201.github.io//images/avatar.png?v=1594896238146 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -492,7 +605,7 @@ signed main() {
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1594893723421);
+                    newDate.setTime(1594896238146);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
