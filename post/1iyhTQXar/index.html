@@ -101,7 +101,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1594910709174" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1594956669213" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -120,7 +120,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1594910709174" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1594956669213" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -207,9 +207,9 @@
                                 Date: <a href="#">2020-07-15</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">15.9
+                                    href="#">17.6
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">2899</a></span>
+                                    <span class="post-words">words:<a href="#">3309</a></span>
                                     
                                             Views:
                                             <span data-hk-page="current"> - </span>
@@ -446,8 +446,12 @@ signed main() {
 <h2 id="t3-简单树上路径">T3 简单树上路径</h2>
 <p>题面（暂无）</p>
 <h3 id="思路-3">思路</h3>
-<p>神仙题<br>
-咕了明天补完思路</p>
+<p>神仙题</p>
+<p>这题要把它转化为二分图匹配的模型。</p>
+<p>首先倍增求出这几个点的 LCA（即他们集合的点），然后同样用 <code>bitset</code> 倍增求出每个人能拿到的特产。</p>
+<p>考虑如何验证每个人买 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 个特产是否有方案。可以建立二分图，左边 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mo>×</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">c\times x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">c</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 个节点，右边 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 个节点。左边的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mo>×</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">c\times x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">c</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 个节点代表共 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span></span></span> 个人，每个人有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 个节点，即要选 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 种特产；右边 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 个节点代表 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 种特产。每个的拥有的节点都与它能拿到的特产连边，然后跑二分图匹配。如果最大匹配刚好是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mo>×</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">c\times x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">c</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 就说明每个人都能选出 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 个特产且互不相同，即有解，否则无解。</p>
+<p>根据 <a href="https://en.wikipedia.org/wiki/Hall%27s_marriage_theorem">Hall 定理</a>，记这 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span></span></span> 个人构成的集合为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span>，则有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>max</mi><mo>⁡</mo></msub><mo>=</mo><mi>min</mi><mo>⁡</mo><mo>(</mo><mi>f</mi><mo>(</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">∣</mi><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mi mathvariant="normal">∣</mi><mo>)</mo><mtext> </mtext><mo>(</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>∈</mo><mi>S</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">x_{\max}=\min(f(S&#x27;)/|S&#x27;|)\ (S&#x27;\in S)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.151392em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.301392em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight">max</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mop">min</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">/</span><span class="mord">∣</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mclose">)</span><span class="mspace"> </span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mclose">)</span></span></span></span>，其中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">f(S&#x27;)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 代表 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup></mrow><annotation encoding="application/x-tex">S&#x27;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.751892em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span> 中所有人能拿到的特产的总种数。</p>
+<p>最后注意到题目中毒瘤的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>256</mn><mi>M</mi></mrow><annotation encoding="application/x-tex">256M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord">6</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span> 空间限制，直接开 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>20</mn><mo>×</mo><mn>300000</mn></mrow><annotation encoding="application/x-tex">20\times 300000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> 个 <code>bitset</code> 倍增会挂空间，所以要询问离线，然后一层一层计算倍增 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">2^i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.824664em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span></span></span></span></span></span></span> 次，并同时计算这一层倍增对每次询问的每个人的贡献。</p>
 <h3 id="code-3">Code</h3>
 <pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
 #define rgi register int
@@ -478,7 +482,7 @@ const int maxn=300004,maxq=50004,maxm=1004;
 const int mod=998244353,inf=1000000007;
 
 int anc[20][maxn],dep[maxn],c[maxq],v[6][maxq];
-std::bitset&lt;maxm&gt; f[maxn],g[maxn],p[6][maxq],tmp;
+std::bitset&lt;maxm&gt; f[maxn],g[maxn],p[6][maxq],tmp; // f 记录第 i 次倍增的结果，g 则是第 i-1 次
 inline int LCA(int p,int q) {
 	if(dep[p]&lt;dep[q]) std::swap(p,q);
 	for(rgi i=19;i&gt;=0;--i) if(dep[q]&lt;=dep[p]-(1&lt;&lt;i)) p=anc[i][p];
@@ -491,7 +495,7 @@ signed main() {
 	// freopen(&quot;travel.out&quot;,&quot;w&quot;,stdout);
 	int n,m,q,t,ans; fin&gt;&gt;n&gt;&gt;m&gt;&gt;q;
 	anc[0][1]=dep[1]=1; for(rgi i=2;i&lt;=n;++i) fin&gt;&gt;anc[0][i],dep[i]=dep[anc[0][i]]+1;
-	for(rgi i=1;i&lt;=n;++i) fin&gt;&gt;t,g[i][t]=1; for(rgi i=1;i&lt;=n;++i) f[i]=g[anc[0][i]];
+	for(rgi i=1;i&lt;=n;++i) fin&gt;&gt;t,g[i][t]=1; for(rgi i=1;i&lt;=n;++i) f[i]=g[anc[0][i]]; // 先初始化好第 0 层倍增的结果
 	for(rgi j=1;j&lt;20;++j) for(rgi i=1;i&lt;=n;++i) anc[j][i]=anc[j-1][anc[j-1][i]];
 	for(rgi i=1;i&lt;=q;++i) {fin&gt;&gt;c[i];
 		for(rgi j=1;j&lt;=c[i];++j) fin&gt;&gt;v[j][i],p[j][i]=g[v[j][i]];
@@ -499,7 +503,7 @@ signed main() {
 	}
 	for(rgi k=0;k&lt;20;++k) {
 		for(rgi i=1;i&lt;=q;++i) for(rgi j=1;j&lt;=c[i];++j)
-			if((dep[v[j][i]]-dep[v[0][i]])&amp;(1&lt;&lt;k))
+			if((dep[v[j][i]]-dep[v[0][i]])&amp;(1&lt;&lt;k)) // 二进制分解当前节点到目标节点的深度差，即可判断是否用到了这一层倍增
 				p[j][i]|=f[v[j][i]],v[j][i]=anc[k][v[j][i]];
 		memcpy(g,f,sizeof(f));
 		for(rgi i=1;i&lt;=n;++i) f[i]=g[i]|g[anc[k][i]];
@@ -512,7 +516,7 @@ signed main() {
 		}
 		fout&lt;&lt;(ans*c[k])&lt;&lt;endl;
 	}
-	return 0;
+    return 0;
 }
 // ----------------------------
 // by imzzy
@@ -583,14 +587,14 @@ signed main() {
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
                                                         <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/1iyhTQXar/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/1iyhTQXar/&sharesource=qzone&title=20200715 校内测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1594910709174&summary=&lt;blockquote&gt;
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/1iyhTQXar/&sharesource=qzone&title=20200715 校内测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1594956669213&summary=&lt;blockquote&gt;
 &lt;p&gt;Some people seem to have everything. In fact, they do have everything.&lt;/p&gt;
 &lt;/blockquote&gt;
 "><i class="fa fa-qq"></i></a>
                                                         <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/1iyhTQXar/&sharesource=weibo&title=20200715 校内测试订正 + " - " + &lt;blockquote&gt;
 &lt;p&gt;Some people seem to have everything. In fact, they do have everything.&lt;/p&gt;
 &lt;/blockquote&gt;
-&pic="https://imzzy1201.github.io//images/avatar.png?v=1594910709174 "><i class="fa fa-weibo "></i></a>
+&pic="https://imzzy1201.github.io//images/avatar.png?v=1594956669213 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -691,7 +695,7 @@ signed main() {
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1594910709174);
+                    newDate.setTime(1594956669213);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
