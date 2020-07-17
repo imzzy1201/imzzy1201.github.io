@@ -2,13 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://imzzy1201.github.io/</id>
     <title>imzzy1201&apos;s Blog</title>
-    <updated>2020-07-17T04:07:19.424Z</updated>
+    <updated>2020-07-17T11:12:13.163Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://imzzy1201.github.io/"/>
     <link rel="self" href="https://imzzy1201.github.io/atom.xml"/>
     <logo>https://imzzy1201.github.io/images/avatar.png</logo>
     <icon>https://imzzy1201.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, imzzy1201&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[20200717 校内测试订正]]></title>
+        <id>https://imzzy1201.github.io/post/SJg1NdVND/</id>
+        <link href="https://imzzy1201.github.io/post/SJg1NdVND/">
+        </link>
+        <updated>2020-07-17T10:50:13.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote></blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote></blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20200715 校内测试订正]]></title>
         <id>https://imzzy1201.github.io/post/1iyhTQXar/</id>
@@ -141,21 +152,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>You aren't fully capable of deciding your own destiny.</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NOI Online R2 TG 订正]]></title>
-        <id>https://imzzy1201.github.io/post/-5pBeF37l/</id>
-        <link href="https://imzzy1201.github.io/post/-5pBeF37l/">
-        </link>
-        <updated>2020-04-28T04:02:40.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>If you don't try, how can you know what it feels like to be desperate?</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>If you don't try, how can you know what it feels like to be desperate?</p>
 </blockquote>
 ]]></content>
     </entry>

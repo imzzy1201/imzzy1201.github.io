@@ -365,18 +365,18 @@
   box-shadow: 1px 5px 10px -5px #444;
 }
 .dark-theme .post-item:hover {
-  background-color: #e0e0e0;
-  box-shadow: 1px 5px 10px -5px #888;
-  -webkit-transform: translateY(-8px);
-  transform: translateY(-8px);
+  /*background-color: #e0e0e0;
+      box-shadow: 1px 5px 10px -5px #888;
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);*/
 }
 .dark-theme .post-item:hover span {
-  color: #161209;
+  /*color: #161209;*/
 }
 .dark-theme .post-item:hover a {
-  color: #161209;
-  text-decoration: none;
-  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  /*color: #161209;*/
+  /*text-decoration: none;*/
+  /*transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;*/
 }
 .dark-theme .post-item:hover a:hover {
   color: #2d96bd;
@@ -461,21 +461,21 @@
   }
 }
 .post-item:hover {
-  background-color: #424242;
-  box-shadow: 1px 5px 10px -5px #888;
-  -webkit-transform: translateY(-8px);
-  transform: translateY(-8px);
+  /*background-color: #424242;
+    box-shadow: 1px 5px 10px -5px #888;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);*/
 }
 .post-item:hover span {
-  color: #bdbdbd;
+  /*color: #8d8d8d;*/
 }
 .post-item:hover a {
-  color: #bdbdbd;
-  text-decoration: none;
-  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  /*color: #8d8d8d;*/
+  /*text-decoration: none;*/
+  /*transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;*/
 }
 .post-item:hover a:hover {
-  color: #fafafa;
+  color: #4Ea1dC;
   text-decoration: none;
   transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
 }
