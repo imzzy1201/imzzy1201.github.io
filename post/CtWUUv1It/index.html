@@ -101,7 +101,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1595061240927" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1595069013556" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -120,7 +120,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1595061240927" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1595069013556" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -207,9 +207,9 @@
                                 Date: <a href="#">2020-07-18</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">7.3
+                                    href="#">11.1
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">2043</a></span>
+                                    <span class="post-words">words:<a href="#">2940</a></span>
                                     
                                             Views:
                                             <span data-hk-page="current"> - </span>
@@ -284,15 +284,74 @@ AA 树是红黑树的一个变种，其简化了红黑树的实现方法。</li>
 s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
 s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.13278em;"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.93em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></li>
 <li>B 树<br>
-B 树本来是平衡的多叉树，但也可以以二叉查找树的形式出现。其应用大多在数据库和文件系统上。</li>
+B 树本来是平衡的多叉树，但也可以以二叉查找树的形式出现。其应用大多在数据库和文件系统上。
+<ul>
+<li>2-3 树，2-3-4 树<br>
+都是特例化的 B 树。</li>
+</ul>
+</li>
 <li>节点大小平衡树<br>
 <s>就是神贴里争论的是否属于平衡树的那个可怜的数据结构</s>（雾<br>
 节点大小平衡树（SBT）用旋转维护“节点大小”平衡，被其发明人陈启峰称为“目前为止速度最快的高级二叉搜索树”，但真实性存疑，并且可能退化。</li>
 </ul>
+<h1 id="平衡树基础">平衡树基础</h1>
 <h2 id="二叉查找树">二叉查找树</h2>
 <p>这算是前置知识了，这里不再详述。大部分平衡树的操作还是跟普通二叉查找树紧密结合的，少部分因其独特的操作和性质，所以也可以将二叉查找树的基本操作简化一些。</p>
-<h2 id="平衡树基础">平衡树基础</h2>
-<p>常见的基于旋转的平衡树有</p>
+<p>这里先给出几个二叉查找树重要的操作定义以便讲解后面平衡树的几个基本定义和操作。</p>
+<p><strong>节点</strong>：<br>
+我们一般将节点定义在结构体中，最常规的二叉查找树将维护以下几个值：</p>
+<ol>
+<li><code>father</code> 指向父节点</li>
+<li><code>child[2]</code> 指向两个子节点，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 是左儿子 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 是右儿子（没有子节点就指向空）</li>
+<li><code>value</code> 即节点代表的值</li>
+<li><code>count</code> 即节点的值出现的次数（比如树中插入了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 次 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> 那么 <code>value</code> 值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> 的节点 <code>count</code> 就应该是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>）</li>
+<li><code>size</code> 即节点的子树中所有值出现次数的和（或者说子树中所有节点的 <code>count</code> 和）</li>
+</ol>
+<p><strong>子节点方向</strong><br>
+我也不知道怎么描述，意思就是 <code>son(p)</code> 返回的是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 是其父节点的哪个儿子，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 是左儿子 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 是右儿子。</p>
+<p><strong>新节点</strong>：<br>
+<code>newnode(f,v)</code> 指构造一个新的节点，其父节点为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span>，值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>。</p>
+<p><strong>连接</strong>：<br>
+<code>connect(p,f,d)</code> 值将节点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 设为节点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> 的 <code>child[d]</code>。</p>
+<p><strong>更新节点信息</strong><br>
+<code>pushup(p)</code> 指通过 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 的两个子节点来更新 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 的 <code>size</code>。</p>
+<p>上面几个定义、操作都很简单，不作解释了，直接给出代码</p>
+<pre><code class="language-cpp">int root,sum; // root 记根，sum 记已经用过的节点个数
+struct NODE{int val,cnt,siz,fa,ch[2];}t[maxn]; // 节点的父子指针用数组模拟了
+inline int newnode(int f,int v) {
+    t[++sum].fa=f,t[sum].ch[0]=t[sum].ch[1]=0;
+    t[sum].cnt=t[sum].siz=1,t[sum].val=v;
+    return sum;
+}
+inline int son(int p) {return t[t[p].fa].ch[1]==p;}
+inline void connect(int p,int f,int d) {t[p].fa=f,t[f].ch[d]=p;}
+inline void pushup(int p) {t[p].siz=t[t[p].ch[0]].siz+t[t[p].ch[1]].siz+t[p].cnt;}
+</code></pre>
+<h2 id="旋转">旋转</h2>
+<p>太多平衡树基于旋转了，旋转是这些平衡树最基础也是最重要的操作之一。</p>
+<h3 id="定义">定义</h3>
+<p>我们先看旋转的定义。许多文献里将旋转分为左旋（zig）、右旋（zag），其实这样分是没有必要的，这里将全部归为一种 <code>rotate(p)</code>，表示的是将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 转至其父节点的位置。</p>
+<p>我们先看图：</p>
+<figure data-type="image" tabindex="1"><img src="https://imzzy1201.github.io//post-images/1595065851730.svg" alt="" width="700" loading="lazy"></figure>
+<p>图中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A,B,C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> 所在的位置代表几个不知名的分别以 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A,B,C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> 为根子树，旋转的过程并不会改变他们内部结构。<code>rotate(p)</code> 时，我们将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 转到了原本 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> 所在的位置，而 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> 则代替 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> 作为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 的一个子节点，而 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> 则代替 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 作为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> 的一个子节点。</p>
+<h3 id="实现">实现</h3>
+<p>再来看实现：<br>
+我们发现在 <code>rotate</code> 的过程中，有这三条边被砍断了：<br>
+<img src="https://imzzy1201.github.io//post-images/1595066562276.svg" alt="" width="300" loading="lazy"><br>
+砍断后成了这样：<br>
+<img src="https://imzzy1201.github.io//post-images/1595066857558.svg" alt="" width="350" loading="lazy"><br>
+取而代之的，是新连接的三条边 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mo>→</mo><mi>p</mi><mo separator="true">,</mo><mtext> </mtext><mi>p</mi><mo>→</mo><mi>f</mi><mo separator="true">,</mo><mtext> </mtext><mi>f</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">g\to p,\ p\to f,\ f\to B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>：<br>
+<img src="https://imzzy1201.github.io//post-images/1595067185921.svg" alt="" width="350" loading="lazy"><br>
+在程序中，我们不需要体现“砍断”这个操作，因为“连接”的操作相当于已经先将原本的边砍断了。</p>
+<p>所以我们先要这执行三次 <code>connect</code>，具体来说是若设旋转前的时候 <code>s1=son(p),s2=son(f)</code>，则我们需要执行 <code>connect(B,f,s1),connect(f,p,s1^1),connect(p,g,s2)</code>（其中 <code>^</code> 代表异或）</p>
+<p>同时我们发现旋转之后 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> 的 <code>size</code> 会发生改变，所以要执行 <code>pushup(f),pushup(p)</code>（注意这里顺序不能颠倒）</p>
+<p>给出 <code>rotate</code> 代码：</p>
+<pre><code class="language-cpp">inline void rotate(int p) {
+    int f=t[p].fa,g=t[f].fa,s1=son(p),s2=son(f);
+    connect(t[p].ch[s1^1],f,s1),connect(f,p,s1^1),connect(p,g,s2);
+    pushup(f),pushup(p); if(root==f) root=p;
+}
+</code></pre>
 
                         </div>
                         
@@ -300,10 +359,16 @@ B 树本来是平衡的多叉树，但也可以以二叉查找树的形式出现
                             	<a href="#" style="padding-left: 20px;">#</a>
                                 <ul class="markdownIt-TOC">
 <li><a href="#%E5%B9%B3%E8%A1%A1%E6%A0%91">平衡树</a></li>
-<li><a href="#%E6%A6%82%E8%BF%B0">概述</a>
+<li><a href="#%E6%A6%82%E8%BF%B0">概述</a></li>
+<li><a href="#%E5%B9%B3%E8%A1%A1%E6%A0%91%E5%9F%BA%E7%A1%80">平衡树基础</a>
 <ul>
 <li><a href="#%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91">二叉查找树</a></li>
-<li><a href="#%E5%B9%B3%E8%A1%A1%E6%A0%91%E5%9F%BA%E7%A1%80">平衡树基础</a></li>
+<li><a href="#%E6%97%8B%E8%BD%AC">旋转</a>
+<ul>
+<li><a href="#%E5%AE%9A%E4%B9%89">定义</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0">实现</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -337,14 +402,14 @@ B 树本来是平衡的多叉树，但也可以以二叉查找树的形式出现
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
                                                         <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/CtWUUv1It/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/CtWUUv1It/&sharesource=qzone&title=关于平衡树&pics=https://imzzy1201.github.io//images/avatar.png?v=1595061240927&summary=&lt;blockquote&gt;
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/CtWUUv1It/&sharesource=qzone&title=关于平衡树&pics=https://imzzy1201.github.io//images/avatar.png?v=1595069013556&summary=&lt;blockquote&gt;
 &lt;p&gt;When God closes a door for you, he&#39;d close the windows all together.&lt;/p&gt;
 &lt;/blockquote&gt;
 "><i class="fa fa-qq"></i></a>
                                                         <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/CtWUUv1It/&sharesource=weibo&title=关于平衡树 + " - " + &lt;blockquote&gt;
 &lt;p&gt;When God closes a door for you, he&#39;d close the windows all together.&lt;/p&gt;
 &lt;/blockquote&gt;
-&pic="https://imzzy1201.github.io//images/avatar.png?v=1595061240927 "><i class="fa fa-weibo "></i></a>
+&pic="https://imzzy1201.github.io//images/avatar.png?v=1595069013556 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -445,7 +510,7 @@ B 树本来是平衡的多叉树，但也可以以二叉查找树的形式出现
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1595061240927);
+                    newDate.setTime(1595069013556);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
