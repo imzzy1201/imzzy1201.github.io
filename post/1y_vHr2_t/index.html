@@ -101,7 +101,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1594997088170" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1595039003463" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -120,7 +120,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1594997088170" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1595039003463" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -207,9 +207,9 @@
                                 Date: <a href="#">2020-04-25</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">19.8
+                                    href="#">19.9
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">3245</a></span>
+                                    <span class="post-words">words:<a href="#">3273</a></span>
                                     
                                             Views:
                                             <span data-hk-page="current"> - </span>
@@ -225,40 +225,42 @@
 <!-- more -->
 <h1 id="板子">板子</h1>
 <pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
-#define rgi register int
-#define ll long long
-class fastin{
-	private: int _ch,_f;
-	public: inline fastin&amp; operator&gt;&gt;(char&amp;c) {c=getchar(); return *this;}
-		template&lt;typename _Tp&gt; inline fastin&amp; operator&gt;&gt;(_Tp&amp;_x){
-		_x=0; while(!isdigit(_ch)) _f|=(_ch==45),_ch=getchar();
-		while(isdigit(_ch)) _x=(_x&lt;&lt;1)+(_x&lt;&lt;3)+(_ch^48),_ch=getchar();
-		_f&amp;&amp;(_x=-_x,_f=0); return *this;}
-	fastin() {_ch=_f=0;}
-}fin;
-class fastout{
-#define endl '\n'
-	private: int _num[32],_head;
-	public: inline fastout&amp; operator&lt;&lt;(char c) {putchar(c); return *this;}
-		template&lt;typename _Tp&gt; inline fastout&amp; operator&lt;&lt;(_Tp _x){
-		_Tp _k; if(_x==0) {putchar('0'); return *this;} if(_x&lt;0) putchar('-'),_x=-_x;
-		while(_x&gt;0) _k=_x/10,++_head,_num[_head]=(_x-(_k&lt;&lt;1)-(_k&lt;&lt;3))^48,_x=_k;
-		while(_head&gt;0) putchar(_num[_head]),--_head; return *this;}
-	fastout() {_head=0;}
-}fout;
+namespace P_TEMPLATE{
+	#define endl '\n'
+	#define ccf std::cout&lt;&lt;&quot;f**k&quot;&lt;&lt;endl
+	#define rgi register int
+	#define ll long long
+	class fastin{private:int _ch,_f;
+	public:inline fastin&amp;operator&gt;&gt;(char&amp;c){c=getchar();return*this;}
+	template&lt;typename _Tp&gt;inline fastin&amp;operator&gt;&gt;(_Tp&amp;_x){
+	_x=0;while(!isdigit(_ch))_f|=(_ch==45),_ch=getchar();
+	while(isdigit(_ch))_x=(_x&lt;&lt;1)+(_x&lt;&lt;3)+(_ch^48),_ch=getchar();
+	_f&amp;&amp;(_x=-_x,_f=0);return*this;}fastin(){_ch=_f=0;}
+	}fin;class fastout{private:int _num[32],_head;
+	public:inline fastout&amp;operator&lt;&lt;(char c){putchar(c);return*this;}
+	template&lt;typename _Tp&gt; inline fastout&amp;operator&lt;&lt;(_Tp _x){
+	_Tp _k;if(_x==0){putchar('0');return *this;}if(_x&lt;0)putchar('-'),_x=-_x;
+	while(_x&gt;0)_k=_x/10,++_head,_num[_head]=(_x-(_k&lt;&lt;1)-(_k&lt;&lt;3))^48,_x=_k;
+	while(_head&gt;0)putchar(_num[_head]),--_head;return*this;}fastout(){_head=0;}
+	}fout;inline void P_INIT(){
+	#ifdef D_STDOUT_UNBUFFERED
+	setbuf(stdout,NULL);
+	#endif
+}}using namespace P_TEMPLATE;
 // ----------------------------
 // #define int ll
 // using namespace std;
-const int maxn=200004;
-const int mod=998244353,inf=1000000007;
+const int maxn=1000004;
+const int mod=1000000007,inf=1201201201;
 
 signed main()
-{
+{P_INIT();
 	
 	return 0;
 }
 // ----------------------------
 // by imzzy
+
 </code></pre>
 <h1 id="数学相关">数学相关</h1>
 <h2 id="排列组合">排列组合</h2>
@@ -483,9 +485,9 @@ namespace MCMF{
 </code></pre>
 <h1 id="ds">DS</h1>
 <h2 id="普通平衡树">普通平衡树</h2>
-<h3 id="splay">SPLAY</h3>
+<h3 id="splay">splay</h3>
 <p>我的未压行的板子</p>
-<pre><code class="language-cpp">class SPLAY
+<pre><code class="language-cpp">class splay
 {
 private:
     int sum,root,inf_;
@@ -773,7 +775,7 @@ public:
 <ul>
 <li><a href="#%E6%99%AE%E9%80%9A%E5%B9%B3%E8%A1%A1%E6%A0%91">普通平衡树</a>
 <ul>
-<li><a href="#splay">SPLAY</a></li>
+<li><a href="#splay">splay</a></li>
 <li><a href="#treap">treap</a></li>
 </ul>
 </li>
@@ -810,14 +812,14 @@ public:
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
                                                         <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/1y_vHr2_t/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/1y_vHr2_t/&sharesource=qzone&title=备忘录&pics=https://imzzy1201.github.io//images/avatar.png?v=1594997088170&summary=&lt;blockquote&gt;
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/1y_vHr2_t/&sharesource=qzone&title=备忘录&pics=https://imzzy1201.github.io//images/avatar.png?v=1595039003463&summary=&lt;blockquote&gt;
 &lt;p&gt;The more you learn, the more you know; the more you know, the more you forget; the more you forget, the less you know. So why bother to learn?&lt;/p&gt;
 &lt;/blockquote&gt;
 "><i class="fa fa-qq"></i></a>
                                                         <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/1y_vHr2_t/&sharesource=weibo&title=备忘录 + " - " + &lt;blockquote&gt;
 &lt;p&gt;The more you learn, the more you know; the more you know, the more you forget; the more you forget, the less you know. So why bother to learn?&lt;/p&gt;
 &lt;/blockquote&gt;
-&pic="https://imzzy1201.github.io//images/avatar.png?v=1594997088170 "><i class="fa fa-weibo "></i></a>
+&pic="https://imzzy1201.github.io//images/avatar.png?v=1595039003463 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -922,7 +924,7 @@ public:
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1594997088170);
+                    newDate.setTime(1595039003463);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
