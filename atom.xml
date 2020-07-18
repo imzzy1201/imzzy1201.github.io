@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://imzzy1201.github.io/</id>
     <title>imzzy1201&apos;s Blog</title>
-    <updated>2020-07-18T02:23:29.939Z</updated>
+    <updated>2020-07-18T08:34:06.186Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://imzzy1201.github.io/"/>
     <link rel="self" href="https://imzzy1201.github.io/atom.xml"/>
@@ -10,14 +10,33 @@
     <icon>https://imzzy1201.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, imzzy1201&apos;s Blog</rights>
     <entry>
+        <title type="html"><![CDATA[关于平衡树]]></title>
+        <id>https://imzzy1201.github.io/post/CtWUUv1It/</id>
+        <link href="https://imzzy1201.github.io/post/CtWUUv1It/">
+        </link>
+        <updated>2020-07-18T04:36:50.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>When God closes a door for you, he'd close the windows all together.</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>When God closes a door for you, he'd close the windows all together.</p>
+</blockquote>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[20200717 校内测试订正]]></title>
         <id>https://imzzy1201.github.io/post/SJg1NdVND/</id>
         <link href="https://imzzy1201.github.io/post/SJg1NdVND/">
         </link>
         <updated>2020-07-17T10:50:13.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote></blockquote>
+        <summary type="html"><![CDATA[<blockquote>
+<p>The worst nightmare is that you achieve nothing in your life and manage to believe it's a blessing to be common.</p>
+</blockquote>
 ]]></summary>
-        <content type="html"><![CDATA[<blockquote></blockquote>
+        <content type="html"><![CDATA[<blockquote>
+<p>The worst nightmare is that you achieve nothing in your life and manage to believe it's a blessing to be common.</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
@@ -137,21 +156,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>=</mo><mo>{</mo><mi>x</mi><mo>:</mo><mi>x</mi><mi mathvariant="normal">∉</mi><mi>x</mi><mo>}</mo></mrow><annotation encoding="application/x-tex">S=\{x:x\notin x\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mord"><span class="mrel">∈</span></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.75em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="llap"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="inner"><span class="mord"><span class="mord">/</span><span class="mspace" style="margin-right:0.05555555555555555em;"></span></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.25em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mclose">}</span></span></span></span> 🤔</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[笔记 - 二项式反演]]></title>
-        <id>https://imzzy1201.github.io/post/sdj9zeaTV/</id>
-        <link href="https://imzzy1201.github.io/post/sdj9zeaTV/">
-        </link>
-        <updated>2020-05-03T09:58:10.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>You aren't fully capable of deciding your own destiny.</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>You aren't fully capable of deciding your own destiny.</p>
 </blockquote>
 ]]></content>
     </entry>
