@@ -101,7 +101,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1595069793214" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1595248299718" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -120,7 +120,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1595069793214" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1595248299718" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -207,9 +207,9 @@
                                 Date: <a href="#">2020-07-18</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">11.1
+                                    href="#">13.3
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">2940</a></span>
+                                    <span class="post-words">words:<a href="#">3564</a></span>
                                     
                                             Views:
                                             <span data-hk-page="current"> - </span>
@@ -220,7 +220,7 @@
                         
                         <div class="post-content">
                             <blockquote>
-<p>When God closes a door for you, he'd close the windows all together.</p>
+<p>Never trouble trouble till trouble troubles you.</p>
 </blockquote>
 <!-- more -->
 <p><s>声明：跟那篇神贴没有任何关系</s>（雾</p>
@@ -267,12 +267,14 @@ Splay 的常数会比 Treap 略大；但因其核心操作 splay 非常灵活，
 AVL 树是最先提出来的平衡树了，也是狭义平衡树的代表。它通过一系列的旋转操作保证了二叉搜索树严格平衡。它通过引入“平衡因子”（即左右子树高度差），从深到浅对平衡性不正确的节点（即平衡因子为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∓</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\mp2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">∓</span><span class="mord">2</span></span></span></span> 的节点）执行“AVL旋转”来使它恢复平衡。<br>
 这种爷爷辈平衡树在实用中并不常见，但具有非常高的理论价值。</li>
 <li>红黑树<br>
-大名鼎鼎的红黑树，可以算最快的一种平衡树了。简单来说，它将所有节点分为了红、黑两种，红黑两类节点间满足一些性质。通过用旋转维护这些性质，可以使红黑树的最深的叶节点和最浅的叶节点的深度比在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∼</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\dfrac{1}{2}\sim2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 之间。对一次插入，红黑树会至多更改 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 个节点的颜色和进行 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 次旋转；对一次删除，红黑树也至多更改 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 个节点的颜色、进行 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 次旋转。<br>
+大名鼎鼎的红黑树（RBT），可以算最快的一种平衡树了。简单来说，它将所有节点分为了红、黑两种，红黑两类节点间满足一些性质。通过用旋转维护这些性质，可以使红黑树的最深的叶节点和最浅的叶节点的深度比在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∼</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\dfrac{1}{2}\sim2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 之间。对一次插入，红黑树会至多更改 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 个节点的颜色和进行 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 次旋转；对一次删除，红黑树也至多更改 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 个节点的颜色、进行 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 次旋转。<br>
 然而，红黑树的实现非常复杂，不适合运用在算法竞赛中。<br>
 当然，红黑树在工程里的用途还是很广泛的。比如 C++ 的 STL 中 <code>set</code> 和 <code>map</code> 就是用红黑树实现的，Linux 系统的进程管理、内存管理也用到了红黑树。同时，红黑树也经常用在函数式编程中。
 <ul>
 <li>AA 树<br>
-AA 树是红黑树的一个变种，其简化了红黑树的实现方法。</li>
+AA 树是红黑树的一个变种，其简化了红黑树的实现方法。它最鲜明的特征就是所有红节点都不是左儿子，这个性质使得它实现起来更加简便</li>
+<li>左偏红黑树<br>
+左偏红黑树（LLRB）也是红黑树的一个变种，它也是对红点的位置做了一些限制，使其较普通红黑树而言更容易实现。</li>
 </ul>
 </li>
 <li>加权平衡树<br>
@@ -303,7 +305,7 @@ B 树本来是平衡的多叉树，但也可以以二叉查找树的形式出现
 <ol>
 <li><code>father</code> 指向父节点</li>
 <li><code>child[2]</code> 指向两个子节点，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 是左儿子 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 是右儿子（没有子节点就指向空）</li>
-<li><code>value</code> 即节点代表的值</li>
+<li><code>value</code> 即节点的权值（即需要维护其满足二叉查找树性质的值）</li>
 <li><code>count</code> 即节点的值出现的次数（比如树中插入了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 次 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> 那么 <code>value</code> 值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> 的节点 <code>count</code> 就应该是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>）</li>
 <li><code>size</code> 即节点的子树中所有值出现次数的和（或者说子树中所有节点的 <code>count</code> 和）</li>
 </ol>
@@ -321,19 +323,20 @@ struct NODE{int val,cnt,siz,fa,ch[2];}t[maxn]; // 节点的父子指针用数组
 inline int newnode(int f,int v) {
     t[++sum].fa=f,t[sum].ch[0]=t[sum].ch[1]=0;
     t[sum].cnt=t[sum].siz=1,t[sum].val=v;
-    return sum;
+    return sum; // 返回的是新节点的编号
 }
 inline int son(int p) {return t[t[p].fa].ch[1]==p;}
 inline void connect(int p,int f,int d) {t[p].fa=f,t[f].ch[d]=p;}
 inline void pushup(int p) {t[p].siz=t[t[p].ch[0]].siz+t[t[p].ch[1]].siz+t[p].cnt;}
 </code></pre>
 <h2 id="旋转">旋转</h2>
-<p>太多平衡树基于旋转了，旋转是这些平衡树最基础也是最重要的操作之一。</p>
+<p>太多平衡树基于旋转了，旋转是这些平衡树最基础也是最重要的操作之一，所以这里先把它提出来单独讲。</p>
 <h3 id="定义">定义</h3>
 <p>我们先看旋转的定义。许多文献里将旋转分为左旋（zig）、右旋（zag），其实这样分是没有必要的，这里将全部归为一种 <code>rotate(p)</code>，表示的是将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 转至其父节点的位置。</p>
 <p>我们先看图：</p>
 <figure data-type="image" tabindex="1"><img src="https://imzzy1201.github.io//post-images/1595065851730.svg" alt="" width="700" loading="lazy"></figure>
 <p>图中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A,B,C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> 所在的位置代表几个不知名的分别以 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A,B,C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> 为根子树，旋转的过程并不会改变他们内部结构。<code>rotate(p)</code> 时，我们将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 转到了原本 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> 所在的位置，而 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> 则代替 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> 作为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 的一个子节点，而 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> 则代替 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 作为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> 的一个子节点。</p>
+<p>这样的旋转有两个重要的特征：一是仍然满足二叉查找树的性质，因为破坏二叉查找树的性质的方法是绝对不可取的，所以这一点异常重要；二是它会使得一些节点的深度增加，另一些节点深度减小，这个特征则保证了这个操作可以对树的平衡性作出贡献。</p>
 <h3 id="实现">实现</h3>
 <p>再来看实现：<br>
 我们发现在 <code>rotate</code> 的过程中，有这三条边被砍断了：<br>
@@ -352,6 +355,19 @@ inline void pushup(int p) {t[p].siz=t[t[p].ch[0]].siz+t[t[p].ch[1]].siz+t[p].cnt
     pushup(f),pushup(p); if(root==f) root=p;
 }
 </code></pre>
+<h1 id="treap">Treap</h1>
+<h2 id="思想">思想</h2>
+<p>Treap 是由 Raimund G. Seidel 和 Cecilia Rodriguez Aragon 于 1989 年在他们的论文 &quot;<a href="http://faculty.washington.edu/aragon/pubs/rst89.pdf">Randomized Search Trees</a>&quot; 中最先提出的。其命名旨在“Tree+Heap”（这也充分体现了 Treap 的性质）。他们在这篇论文中对 Treap 的理论和实现有详尽的说明，对其复杂度也有严格证明。</p>
+<p>Treap 的精髓在于多维护的一个值——优先级 （<code>pri</code>）。Treap 要求节点优先级满足堆的性质，正式是基于随机化的优先级，Treap 才有了期望 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 的良好时间复杂度。</p>
+<p>举个例子，下面的图里节点中黑色的数表示权值 <code>value</code>，旁边蓝色的数表示优先级 <code>pri</code>。其中只有第一棵树满足 Treap 的性质。<br>
+<img src="https://imzzy1201.github.io//post-images/1595084592392.svg" alt="" loading="lazy"><br>
+可以观察到</p>
+<p>对于每个新插入的节点，Treap 都将赋予它一个随机优先级，Treap 先按照二叉查找树的正常方式插入这个节点，再通过一系列旋转操作来恢复 Treap 中优先级的堆性质。</p>
+<p>虽说 Treap 是有可能退化为所有操作线性时间的，但因为随机化的保障，这的可能性微乎其微，而在大部分情况下 Treap 不仅能保证复杂度，而且常数还较小。</p>
+<h2 id="实现-2">实现</h2>
+<p>说说 Treap 的核心思想“通过一系列旋转操作来恢复 Treap 中优先级的堆性质”（这里将直接称其为“treap 操作”）。</p>
+<p>其实 treap 操作很简单，假设我们插入到的这个节点为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>，Treap 对优先级</p>
+<h2 id="证明">证明</h2>
 
                         </div>
                         
@@ -369,6 +385,13 @@ inline void pushup(int p) {t[p].siz=t[t[p].ch[0]].siz+t[t[p].ch[1]].siz+t[p].cnt
 <li><a href="#%E5%AE%9E%E7%8E%B0">实现</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#treap">Treap</a>
+<ul>
+<li><a href="#%E6%80%9D%E6%83%B3">思想</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0-2">实现</a></li>
+<li><a href="#%E8%AF%81%E6%98%8E">证明</a></li>
 </ul>
 </li>
 </ul>
@@ -402,14 +425,14 @@ inline void pushup(int p) {t[p].siz=t[t[p].ch[0]].siz+t[t[p].ch[1]].siz+t[p].cnt
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
                                                         <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/CtWUUv1It/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/CtWUUv1It/&sharesource=qzone&title=关于平衡树&pics=https://imzzy1201.github.io//images/avatar.png?v=1595069793214&summary=&lt;blockquote&gt;
-&lt;p&gt;When God closes a door for you, he&#39;d close the windows all together.&lt;/p&gt;
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/CtWUUv1It/&sharesource=qzone&title=关于平衡树&pics=https://imzzy1201.github.io//images/avatar.png?v=1595248299718&summary=&lt;blockquote&gt;
+&lt;p&gt;Never trouble trouble till trouble troubles you.&lt;/p&gt;
 &lt;/blockquote&gt;
 "><i class="fa fa-qq"></i></a>
                                                         <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/CtWUUv1It/&sharesource=weibo&title=关于平衡树 + " - " + &lt;blockquote&gt;
-&lt;p&gt;When God closes a door for you, he&#39;d close the windows all together.&lt;/p&gt;
+&lt;p&gt;Never trouble trouble till trouble troubles you.&lt;/p&gt;
 &lt;/blockquote&gt;
-&pic="https://imzzy1201.github.io//images/avatar.png?v=1595069793214 "><i class="fa fa-weibo "></i></a>
+&pic="https://imzzy1201.github.io//images/avatar.png?v=1595248299718 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -430,6 +453,10 @@ inline void pushup(int p) {t[p].siz=t[t[p].ch[0]].siz+t[t[p].ch[1]].siz+t[p].cnt
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
+                                                                                        <a class="prev" rel="prev" href="https://imzzy1201.github.io/post/2rSfiSPRw/">
+                                                                                            20200720 校内测试订正
+                                                                                        </a>
+                                                                                        
                                                                                             
                                                                                                 <a class="next" rel="next" href="https://imzzy1201.github.io/post/SJg1NdVND/">
                                                                                                     20200717 校内测试订正
@@ -510,7 +537,7 @@ inline void pushup(int p) {t[p].siz=t[t[p].ch[0]].siz+t[t[p].ch[1]].siz+t[p].cnt
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1595069793214);
+                    newDate.setTime(1595248299718);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
