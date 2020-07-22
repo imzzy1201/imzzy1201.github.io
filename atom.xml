@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://imzzy1201.github.io/</id>
     <title>imzzy1201&apos;s Blog</title>
-    <updated>2020-07-22T12:35:03.372Z</updated>
+    <updated>2020-07-22T12:47:52.286Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://imzzy1201.github.io/"/>
     <link rel="self" href="https://imzzy1201.github.io/atom.xml"/>
     <logo>https://imzzy1201.github.io/images/avatar.png</logo>
     <icon>https://imzzy1201.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, imzzy1201&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[咕咕咕]]></title>
+        <id>https://imzzy1201.github.io/post/7kZGCxGbI/</id>
+        <link href="https://imzzy1201.github.io/post/7kZGCxGbI/">
+        </link>
+        <updated>2020-07-22T12:36:05.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20200720 校内测试订正]]></title>
         <id>https://imzzy1201.github.io/post/2rSfiSPRw/</id>
@@ -141,21 +148,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>Never put off the work till tomorrow, you can put off today.</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[笔记 - Catalan 数]]></title>
-        <id>https://imzzy1201.github.io/post/QhLY5-IRd/</id>
-        <link href="https://imzzy1201.github.io/post/QhLY5-IRd/">
-        </link>
-        <updated>2020-05-07T07:25:30.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>To live is to risk it at all.</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>To live is to risk it at all.</p>
 </blockquote>
 ]]></content>
     </entry>
