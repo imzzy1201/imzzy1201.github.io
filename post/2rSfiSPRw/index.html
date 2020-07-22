@@ -101,7 +101,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1595248299718" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1595421298621" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -120,7 +120,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1595248299718" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1595421298621" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -207,9 +207,9 @@
                                 Date: <a href="#">2020-07-20</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">0.3
+                                    href="#">6.5
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">87</a></span>
+                                    <span class="post-words">words:<a href="#">1210</a></span>
                                     
                                             Views:
                                             <span data-hk-page="current"> - </span>
@@ -230,7 +230,138 @@ T3 30pt 一眼分码完就走人了</p>
 <p>总分 230 算是这几次考得最好的了</p>
 <h1 id="2-题解">2. 题解</h1>
 <p><a href="https://imzzy1201.github.io/f1/test20200720.zip">测试资源链接</a>（校内题库，不公开密码）</p>
-<h2 id="t1">T1</h2>
+<h2 id="t1-故障检测">T1 故障检测</h2>
+<p>题面（暂无）</p>
+<h3 id="思路">思路</h3>
+<p>考虑二分法。我们发现，每次询问一串节点，可以确定选中的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 个点中后 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">m-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 个点是否为故障点，并确定故障点在这 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 个点的左侧还是右侧，稍加分析可以得出，令 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>i</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mclose">)</span></span></span></span> 表示确定 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 个点中的故障点所需询问次数，则易得：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>i</mi><mo>)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>f</mi><mrow><mo fence="true">(</mo><mrow><mo fence="true">⌈</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mi>m</mi></mrow><mn>2</mn></mfrac><mo fence="true">⌉</mo></mrow><mo fence="true">)</mo></mrow><mo>+</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>n</mi><mo>&gt;</mo><mi>m</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>n</mi><mo>≤</mo><mi>m</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">f(i)=
+\begin{cases}
+f\left(\left\lceil\frac{n-m}{2}\right\rceil\right)+1&amp;n&gt;m\\
+1&amp;n\le m
+\end{cases}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">⌈</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.802331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mathdefault mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">⌉</span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">m</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<h2 id="code">Code</h2>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+namespace P_TEMPLATE{
+	#define endl '\n'
+	#define ccf std::cout&lt;&lt;&quot;f**k&quot;&lt;&lt;endl
+	#define rgi register int
+	#define ll long long
+	class fastin{private:int _ch,_f;
+	public:inline fastin&amp;operator&gt;&gt;(char&amp;c){c=getchar();return*this;}
+	template&lt;typename _Tp&gt;inline fastin&amp;operator&gt;&gt;(_Tp&amp;_x){
+	_x=0;while(!isdigit(_ch))_f|=(_ch==45),_ch=getchar();
+	while(isdigit(_ch))_x=(_x&lt;&lt;1)+(_x&lt;&lt;3)+(_ch^48),_ch=getchar();
+	_f&amp;&amp;(_x=-_x,_f=0);return*this;}fastin(){_ch=_f=0;}
+	}fin;class fastout{private:int _num[32],_head;
+	public:inline fastout&amp;operator&lt;&lt;(char c){putchar(c);return*this;}
+	template&lt;typename _Tp&gt; inline fastout&amp;operator&lt;&lt;(_Tp _x){
+	_Tp _k;if(_x==0){putchar('0');return *this;}if(_x&lt;0)putchar('-'),_x=-_x;
+	while(_x&gt;0)_k=_x/10,++_head,_num[_head]=(_x-(_k&lt;&lt;1)-(_k&lt;&lt;3))^48,_x=_k;
+	while(_head&gt;0)putchar(_num[_head]),--_head;return*this;}fastout(){_head=0;}
+	}fout;inline void P_INIT(){
+	#ifdef D_STDOUT_UNBUFFERED
+	setbuf(stdout,NULL),setbuf(stdin,NULL);
+	#endif
+}}using namespace P_TEMPLATE;
+// ----------------------------
+// #define int ll
+// using namespace std;
+const int maxn=1000004;
+const int mod=1000000007,inf=1201201201;
+
+signed main() {
+	// freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+	// freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+	ll n,m,ans=0; fin&gt;&gt;n&gt;&gt;m;
+	while(n&gt;1) {
+		++ans;
+		if(n&lt;=m) break;
+		n=(n-m)/2+1;
+	} fout&lt;&lt;ans;
+	return 0;
+}
+// ----------------------------
+// by imzzy
+
+</code></pre>
+<h2 id="t2-妮可妮可妮">T2 妮可妮可妮</h2>
+<p>题面（暂无）</p>
+<h3 id="思路-2">思路</h3>
+<p>首先我们发现原串和其反串的计算效果是一样的，而算反串就算的是前缀，所以果断取反串。</p>
+<p>观察形如 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>B</mi><mi>A</mi><mi>B</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">ABABA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault">A</span></span></span></span> 的串的性质，我们可以发现，它前面重复了两次 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">AB</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>，最后由一个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>。对于判断 AB 是否重复了两次，只需哈希即可。而对于最后一个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>，我们可以预处理时顺序比较，可以做到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>。</p>
+<p>具体实现看代码。</p>
+<h3 id="code-2">Code</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+namespace P_TEMPLATE{
+   #define endl '\n'
+   #define ccf std::cout&lt;&lt;&quot;f**k&quot;&lt;&lt;endl
+   #define rgi register int
+   #define ll long long
+   class fastin{private:int _ch,_f;
+   public:inline fastin&amp;operator&gt;&gt;(char&amp;c){c=getchar();return*this;}
+   template&lt;typename _Tp&gt;inline fastin&amp;operator&gt;&gt;(_Tp&amp;_x){
+   _x=0;while(!isdigit(_ch))_f|=(_ch==45),_ch=getchar();
+   while(isdigit(_ch))_x=(_x&lt;&lt;1)+(_x&lt;&lt;3)+(_ch^48),_ch=getchar();
+   _f&amp;&amp;(_x=-_x,_f=0);return*this;}fastin(){_ch=_f=0;}
+   }fin;class fastout{private:int _num[32],_head;
+   public:inline fastout&amp;operator&lt;&lt;(char c){putchar(c);return*this;}
+   template&lt;typename _Tp&gt; inline fastout&amp;operator&lt;&lt;(_Tp _x){
+   _Tp _k;if(_x==0){putchar('0');return *this;}if(_x&lt;0)putchar('-'),_x=-_x;
+   while(_x&gt;0)_k=_x/10,++_head,_num[_head]=(_x-(_k&lt;&lt;1)-(_k&lt;&lt;3))^48,_x=_k;
+   while(_head&gt;0)putchar(_num[_head]),--_head;return*this;}fastout(){_head=0;}
+   }fout;inline void P_INIT(){
+   #ifdef D_STDOUT_UNBUFFERED
+   setbuf(stdout,NULL),setbuf(stdin,NULL);
+   #endif
+}}using namespace P_TEMPLATE;
+// ----------------------------
+// #define int ll
+// using namespace std;
+const int maxn=500004,maxm=27;
+const int mod=1000000007,inf=1201201201;
+
+char s[maxn],s2[maxn];
+int n;
+bool ans[maxn],book=1;
+void work()
+{
+   srand(time(0));
+   int len=0,mod1=inf+rand()%1201201,mod2=mod+rand()%1201;
+   ll mul1=1,mul2=1,p1a=0,p2a=0,p1b=0,p2b=0;
+   for(rgi i=5,p=0;i&lt;=n;)
+   {
+       while((book||p*3&lt;=i||(p1a*(mul1+1)%mod1!=p1b)||(p2a*(mul2+1)%mod2!=p2b))&amp;&amp;p&lt;=n/2)
+       { // 双哈希求下一个 ABAB 型的 AB 串的长度
+           book=0,++p;
+           ((p1a*=27)+=s[p]-'a'+1)%=mod1;
+           ((p2a*=27)+=s[p]-'a'+1)%=mod2;
+           ((p1b*=27)+=s[p*2-1]-'a'+1)%=mod1;
+           ((p2b*=27)+=s[p*2-1]-'a'+1)%=mod2;
+           ((p1b*=27)+=s[p*2]-'a'+1)%=mod1;
+           ((p2b*=27)+=s[p*2]-'a'+1)%=mod2;
+           (mul1*=27)%=mod1;
+           (mul2*=27)%=mod2;
+       }
+       if(p&gt;n/2) break; // p&gt;n/2 就说明再无 ABAB 式的串了
+       i=std::max(i,p*2+1); // A 串长度至少为1，所以上面求出的 ABAB 串后面再跟上个 A 的长度至少为 2p+1
+       if(s[i]==s[i-p*2]) ans[i++]=1; // 判断是否为合法的 ABABA 串
+       else book=1; // 不合法那么这个 ABAB 串就不可能有与它匹配合法的 ABABA 串了，所以要 ++p
+   }
+}
+signed main() {
+   // freopen(&quot;nico.in&quot;,&quot;r&quot;,stdin);
+   // freopen(&quot;nico.out&quot;,&quot;w&quot;,stdout);
+   scanf(&quot;%s&quot;,s2+1),n=strlen(s2+1);
+   for(rgi i=1;i&lt;=n;++i) s[i]=s2[n-i+1]; work();
+   rgi q,t; fin&gt;&gt;q;
+   while(q--) fin&gt;&gt;t,puts(ans[n-t+1]?&quot;niconiconi&quot;:&quot;no&quot;);
+   return 0;
+}
+
+</code></pre>
+<h2 id="t3-雨中冒险">T3 雨中冒险</h2>
+<p>咕咕咕</p>
 
                         </div>
                         
@@ -240,7 +371,19 @@ T3 30pt 一眼分码完就走人了</p>
 <li><a href="#1-%E6%A6%82%E5%86%B5">1. 概况</a></li>
 <li><a href="#2-%E9%A2%98%E8%A7%A3">2. 题解</a>
 <ul>
-<li><a href="#t1">T1</a></li>
+<li><a href="#t1-%E6%95%85%E9%9A%9C%E6%A3%80%E6%B5%8B">T1 故障检测</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF">思路</a></li>
+</ul>
+</li>
+<li><a href="#code">Code</a></li>
+<li><a href="#t2-%E5%A6%AE%E5%8F%AF%E5%A6%AE%E5%8F%AF%E5%A6%AE">T2 妮可妮可妮</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF-2">思路</a></li>
+<li><a href="#code-2">Code</a></li>
+</ul>
+</li>
+<li><a href="#t3-%E9%9B%A8%E4%B8%AD%E5%86%92%E9%99%A9">T3 雨中冒险</a></li>
 </ul>
 </li>
 </ul>
@@ -274,14 +417,14 @@ T3 30pt 一眼分码完就走人了</p>
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
                                                         <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/2rSfiSPRw/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/2rSfiSPRw/&sharesource=qzone&title=20200720 校内测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1595248299718&summary=&lt;blockquote&gt;
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/2rSfiSPRw/&sharesource=qzone&title=20200720 校内测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1595421298621&summary=&lt;blockquote&gt;
 &lt;p&gt;It&#39;s not the altitude, it&#39;s the attitude.&lt;/p&gt;
 &lt;/blockquote&gt;
 "><i class="fa fa-qq"></i></a>
                                                         <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/2rSfiSPRw/&sharesource=weibo&title=20200720 校内测试订正 + " - " + &lt;blockquote&gt;
 &lt;p&gt;It&#39;s not the altitude, it&#39;s the attitude.&lt;/p&gt;
 &lt;/blockquote&gt;
-&pic="https://imzzy1201.github.io//images/avatar.png?v=1595248299718 "><i class="fa fa-weibo "></i></a>
+&pic="https://imzzy1201.github.io//images/avatar.png?v=1595421298621 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -382,7 +525,7 @@ T3 30pt 一眼分码完就走人了</p>
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1595248299718);
+                    newDate.setTime(1595421298621);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
