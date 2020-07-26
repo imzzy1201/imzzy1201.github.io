@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://imzzy1201.github.io/</id>
     <title>imzzy1201&apos;s Blog</title>
-    <updated>2020-07-23T10:12:42.162Z</updated>
+    <updated>2020-07-26T08:07:28.536Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://imzzy1201.github.io/"/>
     <link rel="self" href="https://imzzy1201.github.io/atom.xml"/>
     <logo>https://imzzy1201.github.io/images/avatar.png</logo>
     <icon>https://imzzy1201.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, imzzy1201&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[20200224 测试订正]]></title>
+        <id>https://imzzy1201.github.io/post/Y66PjEqEi/</id>
+        <link href="https://imzzy1201.github.io/post/Y66PjEqEi/">
+        </link>
+        <updated>2020-07-26T05:54:54.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20200722 测试订正]]></title>
         <id>https://imzzy1201.github.io/post/1kYV7zMuz/</id>
@@ -133,21 +140,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>You have to work very hard to believe that you are really powerless.</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[笔记 - 后缀数据结构]]></title>
-        <id>https://imzzy1201.github.io/post/tbrptnzGB/</id>
-        <link href="https://imzzy1201.github.io/post/tbrptnzGB/">
-        </link>
-        <updated>2020-06-26T10:02:12.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>Everythings comes full circle.</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>Everythings comes full circle.</p>
 </blockquote>
 ]]></content>
     </entry>

@@ -194,7 +194,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                血的教训
+                                20200224 测试订正
                             </h1>
                             
                                 <!--en-->
@@ -204,12 +204,12 @@
                                         imzzy1201
                                     </a>
                                     <span class="post-time">
-                                Date: <a href="#">2020-04-25</a>
+                                Date: <a href="#">2020-07-26</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">0.1
+                                    href="#">3.1
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">19</a></span>
+                                    <span class="post-words">words:<a href="#">607</a></span>
                                     
                                             Views:
                                             <span data-hk-page="current"> - </span>
@@ -219,20 +219,111 @@
                         </header>
                         
                         <div class="post-content">
-                            <blockquote>
-<p>Failure is not horrible. What's horrible is that you believe this.</p>
-</blockquote>
-<!-- more -->
-<ul>
-<li>Never use <code>__gcd</code>!<br>
-教训： NOIOR2TG -10pts</li>
-</ul>
+                            <!-- more -->
+<h1 id="1-概况">1. 概况</h1>
+<p>ouuan 出的神仙题！<br>
+好题！<br>
+T1 100pts 很妙<br>
+T2 100pts 也很妙<br>
+T3 15pts EA 都不会啊，，但挺有意思的<br>
+总分 215pts 感觉良好（?）</p>
+<h1 id="2-题解">2. 题解</h1>
+<p><a href="https://imzzy1201.github.io/f1/test20200724.zip">测试资源链接</a>（校内题库，不公开密码）</p>
+<h2 id="t1">T1</h2>
+<p><a href="https://codeforces.com/contest/1173/problem/B">题面（Codeforces）</a></p>
+<h3 id="思路">思路</h3>
+<p>构造题啦。<br>
+大概像下面这样放的：</p>
+<pre><code class="language-xpp"> 1   2   -   -   -   -   -   ...
+ -   3   4   -   -   -   -   ...
+ -   -   5   6   -   -   -   ...
+ -   -   -   7   8   -   -   ...
+ -   -   -   -   9  10   -   ...
+ -   -   -   -   -  11  12   ...
+</code></pre>
+<p>然后就……就这样放了呗。</p>
+<h3 id="code">Code</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+#define rgi register int
+using namespace std;
+signed main() {
+	// freopen(&quot;chess.in&quot;,&quot;r&quot;,stdin);
+	// freopen(&quot;chess.out&quot;,&quot;w&quot;,stdout);
+	int n; cin&gt;&gt;n;
+	cout&lt;&lt;n/2+1&lt;&lt;endl;
+	for(rgi i=1;i&lt;=n;++i)
+		cout&lt;&lt;(i+1)/2&lt;&lt;' '&lt;&lt;(i+1)/2+(i%2==0)&lt;&lt;endl;
+	return 0;
+}
+</code></pre>
+<h2 id="t2-纳沃和圆">T2 纳沃和圆</h2>
+<p><a href="https://codeforces.com/contest/1173/problem/D">题面（Codeforces）</a></p>
+<h3 id="思路-2">思路</h3>
+<p>题解讲得非常清楚了，所以呢……直接搬运吧：</p>
+<p>首先，如果选一个根使其变为有根树，可以发现每棵子树一定在一段连续的弧上。<br>
+考虑 DP，令 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>u</mi></msub></mrow><annotation encoding="application/x-tex">f_u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 为子树 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span> 方案数，那么 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>u</mi></msub><mo>=</mo><mo>(</mo><mi mathvariant="normal">∣</mi><mi>s</mi><mi>o</mi><mi>n</mi><mo>(</mo><mi>u</mi><mo>)</mo><mi mathvariant="normal">∣</mi><mo>+</mo><mo>[</mo><mi>u</mi><mi mathvariant="normal">≠</mi><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi><mo>]</mo><mo>)</mo><mo>!</mo><msub><mo>∏</mo><mrow><mi>v</mi><mo>∈</mo><mi>s</mi><mi>o</mi><mi>n</mi><mo>(</mo><mi>u</mi><mo>)</mo></mrow></msub><msub><mi>f</mi><mi>u</mi></msub><mo separator="true">,</mo><mtext> </mtext><mi>a</mi><mi>n</mi><mi>s</mi><mo>=</mo><mi>n</mi><msub><mi>f</mi><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_u=(|son(u)|+[u\neq root])!\prod_{v\in son(u)}f_u,\ ans=nf_{root}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∣</span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mclose">)</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault">u</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.22471em;vertical-align:-0.47471em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mclose">]</span><span class="mclose">)</span><span class="mclose">!</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∏</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.22528999999999993em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">v</span><span class="mrel mtight">∈</span><span class="mord mathdefault mtight">s</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">n</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">u</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.47471em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>（先固定根的位置，每<br>
+棵子树要为儿子排位置，如果非根自己也要参与排位置，然后再画子树）<br>
+事实上不需要 DP，答案为每个点的度数阶乘之积乘上 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>。</p>
+<p>然而我菜所以还是写的 DP（</p>
+<h3 id="code-2">Code</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+#define rgi register int
+#define ll long long
+using namespace std;
+const int maxn=200004,mod=998244353;
+struct EDGE{int v,nxt;}e[maxn&lt;&lt;1]; int fst[maxn],cnte;
+inline void addedge(int u,int v) {e[++cnte]=(EDGE){v,fst[u]},fst[u]=cnte;}
+int fa[maxn];
+ll val[maxn],fact[maxn]; // val 就是上面的 f
+vector&lt;int&gt; son[maxn];
+ll dfs(int u,int f) {
+	fa[u]=f,val[u]=1;
+	for(rgi i=fst[u];i;i=e[i].nxt) if(e[i].v!=f)
+		(val[u]*=dfs(e[i].v,u))%=mod,son[u].push_back(e[i].v);
+	val[u]=val[u]*(son[u].size()+1ll)%mod*fact[son[u].size()]%mod;
+	return val[u];
+}
+signed main() {
+	// freopen(&quot;circle.in&quot;,&quot;r&quot;,stdin);
+	// freopen(&quot;circle.out&quot;,&quot;w&quot;,stdout);
+	int num,n,u,v; cin&gt;&gt;num&gt;&gt;n;
+	fact[0]=1; for(rgi i=1;i&lt;=n;++i) fact[i]=fact[i-1]*i%mod;
+	for(rgi i=1;i&lt;n;++i) cin&gt;&gt;u&gt;&gt;v,addedge(u,v),addedge(v,u);
+	dfs(1,1);
+	ll ans=n*fact[son[1].size()]%mod;
+	for(rgi i=0;i&lt;son[1].size();++i) (ans*=val[son[1][i]])%=mod;
+	cout&lt;&lt;ans&lt;&lt;endl;
+	return 0;
+}
+</code></pre>
+<h2 id="t3-纳沃和无线电">T3 纳沃和无线电</h2>
+<p>咕咕咕</p>
 
                         </div>
                         
                             <div class="post-toc">
                             	<a href="#" style="padding-left: 20px;">#</a>
-                                
+                                <ul class="markdownIt-TOC">
+<li><a href="#1-%E6%A6%82%E5%86%B5">1. 概况</a></li>
+<li><a href="#2-%E9%A2%98%E8%A7%A3">2. 题解</a>
+<ul>
+<li><a href="#t1">T1</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF">思路</a></li>
+<li><a href="#code">Code</a></li>
+</ul>
+</li>
+<li><a href="#t2-%E7%BA%B3%E6%B2%83%E5%92%8C%E5%9C%86">T2 纳沃和圆</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF-2">思路</a></li>
+<li><a href="#code-2">Code</a></li>
+</ul>
+</li>
+<li><a href="#t3-%E7%BA%B3%E6%B2%83%E5%92%8C%E6%97%A0%E7%BA%BF%E7%94%B5">T3 纳沃和无线电</a></li>
+</ul>
+</li>
+</ul>
+
                             </div>
                             
                                 
@@ -246,7 +337,7 @@
 
                                             <p class="copyright-item">
                                                 <span>Permalink:</span>
-                                                <span><a href="https://imzzy1201.github.io/post/2FOmxF-Xk/">https://imzzy1201.github.io/post/2FOmxF-Xk/</a></span>
+                                                <span><a href="https://imzzy1201.github.io/post/Y66PjEqEi/">https://imzzy1201.github.io/post/Y66PjEqEi/</a></span>
                                             </p>
 
                                             <p class="copyright-item">
@@ -261,15 +352,9 @@
                                                         <span style="margin-right:15px">
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
-                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/2FOmxF-Xk/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/2FOmxF-Xk/&sharesource=qzone&title=血的教训&pics=https://imzzy1201.github.io//images/avatar.png?v=1595750842802&summary=&lt;blockquote&gt;
-&lt;p&gt;Failure is not horrible. What&#39;s horrible is that you believe this.&lt;/p&gt;
-&lt;/blockquote&gt;
-"><i class="fa fa-qq"></i></a>
-                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/2FOmxF-Xk/&sharesource=weibo&title=血的教训 + " - " + &lt;blockquote&gt;
-&lt;p&gt;Failure is not horrible. What&#39;s horrible is that you believe this.&lt;/p&gt;
-&lt;/blockquote&gt;
-&pic="https://imzzy1201.github.io//images/avatar.png?v=1595750842802 "><i class="fa fa-weibo "></i></a>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/Y66PjEqEi/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/Y66PjEqEi/&sharesource=qzone&title=20200224 测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1595750842802&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/Y66PjEqEi/&sharesource=weibo&title=20200224 测试订正 + " - " + &pic="https://imzzy1201.github.io//images/avatar.png?v=1595750842802 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -291,6 +376,10 @@
                                                                                 <section class="post-nav">
                                                                                     
                                                                                             
+                                                                                                <a class="next" rel="next" href="https://imzzy1201.github.io/post/1kYV7zMuz/">
+                                                                                                    20200722 测试订正
+                                                                                                </a>
+                                                                                                
                                                                                 </section>
                     </article>
                 </div>

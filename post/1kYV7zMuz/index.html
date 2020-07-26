@@ -101,7 +101,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1595499132312" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1595750842802" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -120,7 +120,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1595499132312" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1595750842802" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -207,9 +207,9 @@
                                 Date: <a href="#">2020-07-22</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">0.3
+                                    href="#">6.7
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">68</a></span>
+                                    <span class="post-words">words:<a href="#">1205</a></span>
                                     
                                             Views:
                                             <span data-hk-page="current"> - </span>
@@ -231,6 +231,121 @@ T2 40pt 算是挺好的 DP 题了<br>
 T3 10pt 不会，神仙题<br>
 总分 50pt emmmm…</p>
 <h1 id="2-题解">2. 题解</h1>
+<p><a href="https://imzzy1201.github.io/f1/test20200722.zip">测试资源链接</a>（校内题库，不公开密码）</p>
+<h2 id="t1-低仿机器人">T1 低仿机器人</h2>
+<p>题面（暂无）</p>
+<h3 id="思路">思路</h3>
+<p>毒瘤大模拟。听说 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext mathvariant="sans-serif">C</mtext><mstyle mathcolor="red"><mtext mathvariant="sans-serif">lever_Jimmy</mtext></mstyle></mrow><annotation encoding="application/x-tex">\textsf{C}\color{red}\textsf{lever\_Jimmy}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0444399999999998em;vertical-align:-0.35em;"></span><span class="mord text"><span class="mord textsf">C</span></span><span class="mord text" style="color:red;"><span class="mord textsf" style="color:red;">lever_Jimmy</span></span></span></span></span> 写了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn></mrow><annotation encoding="application/x-tex">7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span></span></span></span>kb 的代码。但好像 std 没压行也就 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>150</mn></mrow><annotation encoding="application/x-tex">150</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">5</span><span class="mord">0</span></span></span></span> 行啊。</p>
+<p>反正蛮多细节，代码马上补。</p>
+<h3 id="code">Code</h3>
+<pre><code class="language-cpp">Empty!
+</code></pre>
+<h2 id="t2-迷路的刺豚">T2 迷路的刺豚</h2>
+<p>题面（暂无）</p>
+<h3 id="思路-2">思路</h3>
+<p>可以看到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> 很小，所以可以状压当前已经经过了的菜店。</p>
+<p>总共有以下步骤：</p>
+<ol>
+<li>先动态规划求出刺豚在每个点的最大体积</li>
+<li>用类似 SPFA 的 bfs 方法以每个菜店为起点求它到所有点的最短路以及最短路上的最大体积和（注意这里的体积和不包含起点那个菜店的体积）</li>
+<li>状压当前已经到过的菜店，动态规划求出经过所有菜店的最短路以及最短路上的最大体积和</li>
+</ol>
+<p>大概就是这样的，实现上有一些小细节吧。</p>
+<h3 id="code-2">Code</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+namespace imzzy{
+	#define endl '\n'
+	#define rgi register int
+	#define ll long long
+	class fastin{private:int _ch,_f;
+	public:inline fastin&amp;operator&gt;&gt;(char&amp;c){c=getchar();return*this;}
+	template&lt;typename _Tp&gt;inline fastin&amp;operator&gt;&gt;(_Tp&amp;_x){
+	_x=0;while(!isdigit(_ch))_f|=(_ch==45),_ch=getchar();
+	while(isdigit(_ch))_x=(_x&lt;&lt;1)+(_x&lt;&lt;3)+(_ch^48),_ch=getchar();
+	_f&amp;&amp;(_x=-_x,_f=0);return*this;}fastin(){_ch=_f=0;}
+	}fin;class fastout{private:int _num[32],_head;
+	public:inline fastout&amp;operator&lt;&lt;(char c){putchar(c);return*this;}
+	template&lt;typename _Tp&gt; inline fastout&amp;operator&lt;&lt;(_Tp _x){
+	_Tp _k;if(_x==0){putchar('0');return *this;}if(_x&lt;0)putchar('-'),_x=-_x;
+	while(_x&gt;0)_k=_x/10,++_head,_num[_head]=(_x-(_k&lt;&lt;1)-(_k&lt;&lt;3))^48,_x=_k;
+	while(_head&gt;0)putchar(_num[_head]),--_head;return*this;}fastout(){_head=0;}
+	}fout;inline void P_INIT(){
+	#ifdef D_STDOUT_UNBUFFERED
+	setbuf(stdout,NULL);
+	#endif
+}}using namespace imzzy;
+// ----------------------------
+// #define int ll
+using namespace std;
+const int maxn=304;
+const int mod=1000000007,inf=1201201201;
+const int dir[4][2]={{1,0},{0,1},{-1,0},{0,-1}};
+
+int a[maxn][maxn],px[maxn],py[maxn]; //
+int f[maxn][maxn],g[maxn][maxn];
+int dist[maxn][maxn],kkk[maxn][maxn];
+int to1[20][20],to2[20][20];
+int n,m,s,p;
+queue&lt;pair&lt;int,int&gt; &gt;q;
+bool book[maxn][maxn];
+void bfs(int t) {
+	q.push(make_pair(px[t],py[t]));
+	memset(dist,0x3f,sizeof(dist));
+	memset(kkk,0x3f,sizeof(kkk));
+	dist[px[t]][py[t]]=kkk[px[t]][py[t]]=0;
+	while(!q.empty()) {
+		pair&lt;int,int&gt; pos=q.front(); q.pop();
+		int x=pos.first,y=pos.second;
+		book[x][y]=0;
+		for(rgi i=0;i&lt;4;++i) {
+			int tx=x+dir[i][0],ty=y+dir[i][1];
+			if(tx&gt;=0&amp;&amp;tx&lt;=n&amp;&amp;ty&gt;=0&amp;&amp;ty&lt;=m&amp;&amp;!a[tx][ty])
+			if(dist[tx][ty]&gt;dist[x][y]+1 || dist[tx][ty]==dist[x][y]+1 &amp;&amp; kkk[tx][ty]&lt;kkk[x][y]+g[tx][ty]) {
+				dist[tx][ty]=dist[x][y]+1,kkk[tx][ty]=kkk[x][y]+g[tx][ty];
+				if(!book[tx][ty]) book[tx][ty]=1,q.push(make_pair(tx,ty));
+			}
+		}
+	}
+	for(rgi i=0;i&lt;=p;++i) if(i!=t)
+		to1[t][i]=dist[px[i]][py[i]],to2[t][i]=kkk[px[i]][py[i]];
+}
+bool ch[20];
+int dp[34000][20],ccf[34000][20];
+signed main()
+{P_INIT();
+	// freopen(&quot;expand.in&quot;,&quot;r&quot;,stdin);
+	// freopen(&quot;expand.out&quot;,&quot;w&quot;,stdout);
+	fin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
+	for(rgi i=1;i&lt;=n;++i) for(rgi j=1;j&lt;=m;++j) fin&gt;&gt;a[i][j];
+	for(rgi i=1;i&lt;=n;++i) for(rgi j=1;j&lt;=m;++j) if(a[i][j]==0)
+		f[i][j]=min(min(f[i-1][j],f[i][j-1]),f[i-1][j-1])+1;
+	for(rgi i=1;i&lt;=n;++i) for(rgi j=1;j&lt;=m;++j) for(rgi k=1;k&lt;=s&amp;&amp;i+k&lt;=n&amp;&amp;j+k&lt;=m;++k)
+		if(f[i+k][j+k]&gt;=2*k+1) g[i][j]=k; else break;
+	fin&gt;&gt;px[0]&gt;&gt;py[0]&gt;&gt;p,++px[0],++py[0];
+	for(rgi i=1;i&lt;=p;++i) fin&gt;&gt;px[i]&gt;&gt;py[i],++px[i],++py[i];
+	for(rgi i=0;i&lt;=p;++i) bfs(i);
+	memset(dp,0x3f,sizeof(dp)),memset(dp[1],0,sizeof(dp[1]));
+	memset(ccf,0,sizeof(ccf)),ccf[1][0]=g[px[0]][py[0]];
+	for(rgi i=1;i&lt;1&lt;&lt;(p+1);++i) {
+		for(rgi j=0;j&lt;=p;++j) ch[j]=(i&amp;(1&lt;&lt;j))?1:0;
+		for(rgi j=0;j&lt;=p;++j) if(ch[j])
+			for(rgi k=0;k&lt;=p;++k) if(ch[k]&amp;&amp;j!=k)
+				if(dp[i][j]&gt;dp[i-(1&lt;&lt;j)][k]+to1[k][j] || dp[i][j]==dp[i-(1&lt;&lt;j)][k]+to1[k][j] &amp;&amp; ccf[i][j]&lt;ccf[i-(1&lt;&lt;j)][k]+to2[k][j])
+					dp[i][j]=dp[i-(1&lt;&lt;j)][k]+to1[k][j],ccf[i][j]=ccf[i-(1&lt;&lt;j)][k]+to2[k][j];
+	}
+	int ans1=inf,ans2=0;
+	for(rgi i=0;i&lt;=p;++i) {
+		if(ans1&gt;dp[(1&lt;&lt;(p+1))-1][i] || ans1==dp[(1&lt;&lt;(p+1))-1][i] &amp;&amp; ans2&lt;ccf[(1&lt;&lt;(p+1))-1][i])
+			ans1=dp[(1&lt;&lt;(p+1))-1][i],ans2=ccf[(1&lt;&lt;(p+1))-1][i];
+	} fout&lt;&lt;ans1&lt;&lt;' '&lt;&lt;ans2&lt;&lt;endl;
+	return 0;
+}
+// ----------------------------
+// by imzzy
+
+</code></pre>
+<h2 id="t3">T3</h2>
+<p>咕咕咕神仙题</p>
 
                         </div>
                         
@@ -238,7 +353,23 @@ T3 10pt 不会，神仙题<br>
                             	<a href="#" style="padding-left: 20px;">#</a>
                                 <ul class="markdownIt-TOC">
 <li><a href="#1-%E6%A6%82%E5%86%B5">1. 概况</a></li>
-<li><a href="#2-%E9%A2%98%E8%A7%A3">2. 题解</a></li>
+<li><a href="#2-%E9%A2%98%E8%A7%A3">2. 题解</a>
+<ul>
+<li><a href="#t1-%E4%BD%8E%E4%BB%BF%E6%9C%BA%E5%99%A8%E4%BA%BA">T1 低仿机器人</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF">思路</a></li>
+<li><a href="#code">Code</a></li>
+</ul>
+</li>
+<li><a href="#t2-%E8%BF%B7%E8%B7%AF%E7%9A%84%E5%88%BA%E8%B1%9A">T2 迷路的刺豚</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF-2">思路</a></li>
+<li><a href="#code-2">Code</a></li>
+</ul>
+</li>
+<li><a href="#t3">T3</a></li>
+</ul>
+</li>
 </ul>
 
                             </div>
@@ -270,14 +401,14 @@ T3 10pt 不会，神仙题<br>
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
                                                         <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://imzzy1201.github.io/post/1kYV7zMuz/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/1kYV7zMuz/&sharesource=qzone&title=20200722 测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1595499132312&summary=&lt;blockquote&gt;
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://imzzy1201.github.io/post/1kYV7zMuz/&sharesource=qzone&title=20200722 测试订正&pics=https://imzzy1201.github.io//images/avatar.png?v=1595750842802&summary=&lt;blockquote&gt;
 &lt;p&gt;If you&#39;re not satisfied with the life you&#39;re living, don&#39;t just complain. Do something about it.&lt;/p&gt;
 &lt;/blockquote&gt;
 "><i class="fa fa-qq"></i></a>
                                                         <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://imzzy1201.github.io/post/1kYV7zMuz/&sharesource=weibo&title=20200722 测试订正 + " - " + &lt;blockquote&gt;
 &lt;p&gt;If you&#39;re not satisfied with the life you&#39;re living, don&#39;t just complain. Do something about it.&lt;/p&gt;
 &lt;/blockquote&gt;
-&pic="https://imzzy1201.github.io//images/avatar.png?v=1595499132312 "><i class="fa fa-weibo "></i></a>
+&pic="https://imzzy1201.github.io//images/avatar.png?v=1595750842802 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -298,6 +429,10 @@ T3 10pt 不会，神仙题<br>
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
+                                                                                        <a class="prev" rel="prev" href="https://imzzy1201.github.io/post/Y66PjEqEi/">
+                                                                                            20200224 测试订正
+                                                                                        </a>
+                                                                                        
                                                                                             
                                                                                                 <a class="next" rel="next" href="https://imzzy1201.github.io/post/7kZGCxGbI/">
                                                                                                     咕咕咕
@@ -378,7 +513,7 @@ T3 10pt 不会，神仙题<br>
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1595499132312);
+                    newDate.setTime(1595750842802);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
