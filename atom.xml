@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://imzzy1201.github.io/</id>
     <title>imzzy1201&apos;s Blog</title>
-    <updated>2020-07-30T10:55:05.890Z</updated>
+    <updated>2020-08-03T04:55:54.772Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://imzzy1201.github.io/"/>
     <link rel="self" href="https://imzzy1201.github.io/atom.xml"/>
@@ -24,11 +24,19 @@
         <updated>2020-07-26T09:10:44.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[20200224 测试订正]]></title>
+        <title type="html"><![CDATA[20200224 校内测试订正]]></title>
         <id>https://imzzy1201.github.io/post/Y66PjEqEi/</id>
         <link href="https://imzzy1201.github.io/post/Y66PjEqEi/">
         </link>
         <updated>2020-07-26T05:54:54.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>Tough time don't last, tough people do.</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>Tough time don't last, tough people do.</p>
+</blockquote>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[20200722 校内测试订正]]></title>
@@ -52,11 +60,11 @@
         </link>
         <updated>2020-07-22T12:36:05.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
-<p>Tough time don't last, tough people do.</p>
+<p>What is lost is lost.</p>
 </blockquote>
 ]]></summary>
         <content type="html"><![CDATA[<blockquote>
-<p>Tough time don't last, tough people do.</p>
+<p>What is lost is lost.</p>
 </blockquote>
 ]]></content>
     </entry>
